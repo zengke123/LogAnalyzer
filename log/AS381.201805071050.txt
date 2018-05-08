@@ -1,0 +1,364 @@
+AS381主机性能情况如下:
+top - 10:50:23 up 11 days, 18:54,  0 users,  load average: 9.63, 10.71, 10.75
+Tasks: 380 total,  10 running, 370 sleeping,   0 stopped,   0 zombie
+Cpu(s):  3.9%us,  1.5%sy,  0.0%ni, 94.3%id,  0.0%wa,  0.0%hi,  0.2%si,  0.0%st
+Mem:  32657320k total, 15089056k used, 17568264k free,   372156k buffers
+Swap:  2031608k total,        0k used,  2031608k free, 11987856k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  610 min01     15   0 33672 3480 1200 S  9.7  0.0 682:45.52 msgr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+20331 min01     15   0 1491m 103m  71m S  9.7  0.3 318:17.98 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  603 min01     15   0 33768 3688 1200 S  7.7  0.0 489:47.27 msgr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  608 min01     15   0 34064 3560 1200 S  7.7  0.0 579:56.46 msgr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  609 min01     15   0 30516 3252 1200 S  7.7  0.0 435:20.05 msgr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+19666 min01     15   0 1753m 118m  72m S  7.7  0.4 321:15.51 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+19771 min01     15   0 1555m 103m  71m S  7.7  0.3 317:31.74 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+20007 min01     15   0 1495m 102m  71m S  7.7  0.3 315:39.67 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+20010 min01     15   0 1541m 103m  72m S  7.7  0.3 316:29.86 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+20012 min01     15   0 1541m 103m  71m R  7.7  0.3 319:10.06 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+<end>
+AS381主机内存使用最高的10个进程
+  PID USER     %CPU   RSZ COMMAND
+19757 min01     2.2 106972 scf.mul 1 21 87
+20194 min01     2.2 107064 scf.mul 1 21 82
+20196 min01     2.2 107088 scf.mul 1 21 97
+  901 min01     2.2 107796 scf.mul 1 21 101
+19758 min01     2.2 107904 scf.mul 1 21 89
+19666 min01     2.2 121400 scf.mul 1 21 107
+  895 min01     2.2 124360 scf.mul 1 21 95
+  615 min01     0.0 190980 keytree 1 25 1
+15436 sigtx     0.6 194044 sigTX
+  748 min01     0.1 281364 tmnrun 1 99 1
+<end>
+AS381主机io使用情况
+Linux 2.6.18-371.el5 (AS381) 	05/07/2018
+
+Device:         rrqm/s   wrqm/s   r/s   w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await  svctm  %util
+cciss/c0d0        2.33    21.94  0.61 23.54    12.31   181.93    16.09     0.01    0.61   0.06   0.15
+cciss/c0d0p1      0.00     0.00  0.00  0.00     0.01     0.00   111.21     0.00    0.81   0.62   0.00
+cciss/c0d0p2      2.33    21.94  0.61 23.54    12.30   181.93    16.09     0.01    0.61   0.06   0.15
+dm-0              0.00     0.00  0.04  8.25     0.40    32.99     8.06     0.00    0.23   0.02   0.02
+dm-1              0.00     0.00  0.00  0.00     0.00     0.00     8.00     0.00    1.45   0.26   0.00
+dm-2              0.00     0.00  2.90 37.23    11.89   148.94     8.01     0.03    0.59   0.15   0.60
+
+<end>
+AS381主机硬盘使用情况
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/mapper/hdvg-rootlv
+                      30472188   4968368  23930956  18% /
+/dev/cciss/c0d0p1       101086     17995     77872  19% /boot
+tmpfs                 16328660         0  16328660   0% /dev/shm
+/dev/mapper/hdvg-homelv
+                     542896880 128449360 386869972  25% /home
+<end>
+messages日志记录------无新增
+<end>
+
+AS381主机min01账户情况如下:
+min01进程启动情况如下:
+SCF进程启动-----------正常
+MANAGER进程启动-------正常
+SYNC进程启动----------正常
+KEYTREE进程启动-------正常
+TMNRUN进程启动--------正常
+<end>min01进程情况分析完毕:
+
+SCF日志记录分析如下:
+99]行:              [TimerExpire when WaitforATIResult日志]                      [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
+[2]行:               [timerID_global timer is time out日志]                       [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[[33506]行:           [Timeout when wait UDA(LOC)日志]                             [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[12455]行:           [Can not get User-Data日志]                                  [通常为：UDA无法解析日志，一般为HSS回复消息错误导致，无需太过关注]                        
+[67]行:              [Timeout when wait ATI_ACK日志]                              [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
+[3]行:               [Not received Response日志]                                  [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
+[4257]行:            [Can not get resultCode日志]                                 [通常为：UDA无法解析日志，一般为HSS回复消息错误导致i，无需太过关注]                       
+[6418]行:            [message (3,70)日志]                                         [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[206]行:             [Timeout when wait UDA(T-ADS)日志]                           [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[26]行:              [number.*invalid日志]                                        [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[6]行:               [code is not DIAMETER_SUCCESS日志]                           [通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
+[3009]行:            [invalid number [0-9A-Z\#\*]\{1,10\} to get area number日志] [通常为：小于11位的号码,无需获取区号，可忽略]                                             
+[2472]行:            [invalid number [2-9]日志]                                   [通常为：2~9开头的号码,无需获取区号，可忽略]                                              
+[1036]行:            [invalid number 0日志]                                       [通常为：0开头的号码,无需获取区号，可忽略]                                                
+[488]行:             [invalid number 1[0-2]日志]                                  [通常为：10~12开头的号码,无需获取区号，可忽略]                                            
+[427]行:             [invalid number [0-9]\{12,\} to get area number日志]         [通常为：大于11位的号码,无需获取区号，可忽略]                                             
+[10]行:              [invalid number [\#\*]日志]                                  [通常为：特殊字符开头号码，无需获取区号，可忽略]                                          
+[43]行:              [send msg(2,14), but dialogueHasBeenEnd日志]                 [通常为：收到异常TC_END消息日志，可忽略]                                                  
+[39]行:              [msgID=60,msgType=3日志]                                     [通常为：收到异常tcend消息，无需处理]                                                     
+<end>
+
+过滤后日志如下，需要关注
+07:15:37 -1876653853(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003395 to get area number
+09:49:59 -1876612874(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16194353697 to get area number
+09:54:59 can not find fsm -1876611007 for a message (1,31)
+07:36:36 -1859881563(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18088906165 to get area number
+08:17:39 -1859873502(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003263 to get area number
+09:10:03 -1859858223(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19076611535 to get area number
+10:04:51 -1843066118(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+07:07:56 can not find fsm -1826337467 for a message (1,31)
+08:56:10 -1826314931(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+09:24:11 send msg(0,31), but dialogueHasBeenEnd
+09:25:04 -1826305003(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18135276671 to get area number
+09:02:51 -1809537673(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+09:07:16 can not find fsm -1809536210 for a message (1,31)
+09:55:30 can not find fsm -1809518871 for a message (1,31)
+09:57:07 -1809518260(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16195592299 to get area number
+10:45:49 -1809499777(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711003571 to get area number
+07:21:19 -1792785473(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711007516 to get area number
+08:51:41 -1792766002(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+09:49:54 -1792745448(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14152051884 to get area number
+07:54:54 -1776004715(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17498500755 to get area number
+09:07:02 -1775985557(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14156848971 to get area number
+10:11:43 -1775961696(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14153465423 to get area number
+10:34:38 -1775953040(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19077339629 to get area number
+09:09:36 -1742430920(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373175976 to get area number
+09:46:32 can not find fsm -1742417625 for a message (1,31)
+10:35:40 -1742399060(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+00:32:56 -1708911470(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711005224 to get area number
+10:04:33 -1708856766(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16046382828 to get area number
+10:10:12 can not find fsm -1708854633 for a message (1,31)
+06:17:57 -1692131806(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006864 to get area number
+08:05:13 -1692119123(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16042272363 to get area number
+08:59:05 can not find fsm -1692104727 for a message (1,31)
+09:16:53 -1675320857(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711002446 to get area number
+09:26:22 can not find fsm -1675317517 for a message (1,31)
+10:14:49 can not find fsm -1675299457 for a message (1,31)
+07:44:11 -1658568237(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19293017916 to get area number
+09:36:15 can not find fsm -1658536714 for a message (1,31)
+10:04:22 -1658526096(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16266000426 to get area number
+10:06:27 -1658525314(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14169960927 to get area number
+10:43:55 -1658511095(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16262650807 to get area number
+10:46:38 -1641733257(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711000389 to get area number
+10:47:14 -1641733043(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number
+07:56:26 -1625013319(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263211824 to get area number
+08:58:59 -1624997132(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number  to get area number
+09:28:38 -1624986792(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800280240 to get area number
+09:30:51 -1608207703(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+10:38:08 -1608182432(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+00:05:10 can not find fsm -1591474188 for a message (1,31)
+10:02:23 -1591419550(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14169960927 to get area number
+08:01:20 -1574680499(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16261295348 to get area number
+10:08:52 -1574639975(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16262629185 to get area number
+09:15:34 can not find fsm -1557881742 for a message (1,31)
+10:34:16 -1557852396(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:25:36 -1541100911(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14153175176 to get area number
+09:27:48 can not find fsm -1541100158 for a message (1,31)
+10:17:31 -1541081626(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+10:17:31 -1541081626(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+06:37:04 -1524789676(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003505 to get area number
+08:29:16 -1524772383(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009093 to get area number
+08:59:05 -1524763573(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+09:21:03 -1524756050(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14158120099 to get area number
+10:04:01 -1524740078(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373772092 to get area number
+00:50:39 -1507586758(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13090197085 to get area number
+08:57:51 -1507556268(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14640961776 to get area number
+09:20:53 can not find fsm -1507548434 for a message (1,31)
+10:48:13 -1507515837(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number
+09:23:25 -1490770104(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711008263 to get area number
+10:38:55 -1490742049(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17260890703 to get area number
+09:09:33 -1473997856(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711005817 to get area number
+09:40:41 -1473986718(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16572466439 to get area number
+10:37:54 -1473965174(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711000389 to get area number
+10:49:41 -1473960738(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:17:47 -1457217223(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001645 to get area number
+10:35:05 -1457188426(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19075042108 to get area number
+00:08:35 can not find fsm -1440478294 for a message (1,31)
+08:26:46 can not find fsm -1440456004 for a message (1,31)
+09:34:29 -1440434187(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+10:16:09 -1440418576(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711002607 to get area number
+10:28:53 can not find fsm -1440413840 for a message (1,31)
+00:19:18 send msg(0,31), but dialogueHasBeenEnd
+08:37:58 can not find fsm -1406899775 for a message (1,31)
+08:55:10 -1406894659(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+08:54:46 -1390115637(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19205967761 to get area number
+09:40:27 -1390099643(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:40:27 -1390099643(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:45:25 TExecuteFSM 192415008 was deleted.
+09:45:34 send msg(0,31), but dialogueHasBeenEnd
+10:05:23 -1390090373(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16044776572 to get area number
+08:05:16 -1373351489(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006639 to get area number
+08:41:48 -1373342417(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14127702763 to get area number
+09:59:17 -1373315427(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001569 to get area number
+09:26:36 -1339774058(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18135276671 to get area number
+01:45:05 -1323035680(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+06:31:04 -1323031903(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19794223603 to get area number
+07:16:06 can not find fsm -1323027789 for a message (1,31)
+09:24:11 send msg(0,31), but dialogueHasBeenEnd
+03:46:59 can not find fsm -1306259403 for a message (1,31)
+06:32:38 -1306256472(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 182****7262 to get area number
+06:32:38 -1306256472(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 182****7262 to get area number
+08:51:08 -1306232804(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373176070 to get area number
+08:59:10 -1306230266(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 1358**775687795874*08 to get area number
+09:26:15 can not find fsm -1306220962 for a message (1,31)
+09:28:47 -1306220010(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19077517784 to get area number
+00:45:08 -1289483317(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263413266 to get area number
+09:36:55 can not find fsm -1272663320 for a message (1,31)
+10:10:58 -1272650480(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006770 to get area number
+10:48:46 -1272636112(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009395 to get area number
+08:00:27 -1255787395(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263211824 to get area number
+10:01:06 -1255749666(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19078837528 to get area number
+07:20:43 -1239144168(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001523 to get area number
+10:37:05 -1239086473(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+09:33:40 -1205554894(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711002607 to get area number
+09:28:14 -1188779481(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800280240 to get area number
+09:52:01 can not find fsm -1188770719 for a message (1,31)
+10:43:03 -1188751419(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16042362586 to get area number
+10:49:30 -1188748975(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number
+09:25:24 -1172002146(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373768170 to get area number
+10:16:18 -1171983103(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16478600129 to get area number
+10:40:23 -1171973995(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003571 to get area number
+09:00:53 -1155234733(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17310691753 to get area number
+09:08:28 -1155232232(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!
+09:26:55 -1155225681(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711009093 to get area number
+10:27:12 -1155203090(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800832240 to get area number
+00:53:53 -1138489717(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14245228687 to get area number
+09:35:43 -1138446088(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number
+09:59:53 -1121658957(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:59:53 -1121658957(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+09:07:50 -1104899231(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373772673 to get area number
+09:18:19 -1104895594(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 15344752266 to get area number
+10:43:57 -1104863701(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
+10:45:37 can not find fsm -1104863113 for a message (1,31)
+<end>SCF日志例检完成
+
+SSF日志记录分析如下:
+[11893]行:           [should check diametermsg.xml日志]                           [通常为：dia消息字典问题报错，不影响业务，可忽略]                                         
+[19024]行:           [Find FsmInsance is 0日志]                                   [通常为：呼叫释放后收到bye消息日志，可忽略]                                               
+[12061]行:           [when Job is over日志]                                       [通常为：呼叫结束后收到错误INVITE消息，可忽略]                                            
+[14771]行:           [Trace日志]                                                  [通常为：trace日志，可忽略]                                                               
+[18175]行:           [the Job is over日志]                                        [通常为：呼叫结束后收到错误INVITE消息，可忽略]                                            
+[6678]行:            [find  route item when modifyOuterRoute日志]                 [通常为：消息到达后台时，对应呼叫已经释放，所以无路由，无需太过关注]                      
+[3911]行:            [TLibATIResImpl日志]                                         [通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
+[126]行:             [INFO日志]                                                   [通常为：小scf-INFO级别日志，可忽略]    
+<end>                                                  
+过滤后日志如下，需要关注
+09:40:16:ERROR1 index[0] out of range, valueSet's size is 0!
+08:21:36:ERROR1 index[0] out of range, valueSet's size is 0!
+10:03:30:ERROR1 index[0] out of range, valueSet's size is 0!
+10:27:20:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1826281475.
+10:05:53:ERROR1 index[0] out of range, valueSet's size is 0!
+09:46:04:ERROR1 index[0] out of range, valueSet's size is 0!
+10:31:16:ERROR1 index[0] out of range, valueSet's size is 0!
+06:41:03:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1776013998.
+09:05:09:ERROR1 index[0] out of range, valueSet's size is 0!
+10:03:25:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.
+10:03:25:ERROR2 Transfer value to cstr failure:name[35]!!!
+10:34:43:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.
+10:34:43:ERROR2 Transfer value to cstr failure:name[35]!!!
+10:39:43:ERROR1 index[0] out of range, valueSet's size is 0!
+08:58:59:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.
+08:58:59:ERROR2 Transfer value to cstr failure:name[35]!!!
+09:15:07:ERROR1 index[0] out of range, valueSet's size is 0!
+04:58:55:ERROR2 InvokeId(132) is occupied whose capdlg is 1277822241 in setInvokeId
+05:04:55:ERROR2 InvokeId(133) is occupied whose capdlg is 1277822241 in setInvokeId
+05:10:55:ERROR2 InvokeId(135) is occupied whose capdlg is 1277822241 in setInvokeId
+05:13:55:ERROR2 InvokeId(136) is occupied whose capdlg is 1277822241 in setInvokeId
+05:19:55:ERROR2 InvokeId(138) is occupied whose capdlg is 1277822241 in setInvokeId
+05:25:55:ERROR2 InvokeId(139) is occupied whose capdlg is 1277822241 in setInvokeId
+05:28:55:ERROR2 InvokeId(141) is occupied whose capdlg is 1277822241 in setInvokeId
+05:34:55:ERROR2 InvokeId(142) is occupied whose capdlg is 1277822241 in setInvokeId
+05:40:55:ERROR2 InvokeId(144) is occupied whose capdlg is 1277822241 in setInvokeId
+05:43:55:ERROR2 InvokeId(145) is occupied whose capdlg is 1277822241 in setInvokeId
+05:49:55:ERROR2 InvokeId(147) is occupied whose capdlg is 1277822241 in setInvokeId
+05:55:55:ERROR2 InvokeId(148) is occupied whose capdlg is 1277822241 in setInvokeId
+05:58:55:ERROR2 InvokeId(150) is occupied whose capdlg is 1277822241 in setInvokeId
+06:04:55:ERROR2 InvokeId(151) is occupied whose capdlg is 1277822241 in setInvokeId
+06:10:55:ERROR2 InvokeId(153) is occupied whose capdlg is 1277822241 in setInvokeId
+06:13:55:ERROR2 InvokeId(154) is occupied whose capdlg is 1277822241 in setInvokeId
+06:13:55:ERROR2 InvokeId(156) is occupied whose capdlg is 1277822241 in setInvokeId
+09:36:44:ERROR1 index[0] out of range, valueSet's size is 0!
+09:01:57:ERROR1 index[0] out of range, valueSet's size is 0!
+09:27:15:ERROR1 index[0] out of range, valueSet's size is 0!
+03:55:42:ERROR2 InvokeId(133) is occupied whose capdlg is -329972448 in setInvokeId
+03:58:42:ERROR2 InvokeId(134) is occupied whose capdlg is -329972448 in setInvokeId
+03:58:48:ERROR2 InvokeId(129) is occupied whose capdlg is -1506671327 in setInvokeId
+04:04:42:ERROR2 InvokeId(136) is occupied whose capdlg is -329972448 in setInvokeId
+04:04:48:ERROR2 InvokeId(130) is occupied whose capdlg is -1506671327 in setInvokeId
+04:10:42:ERROR2 InvokeId(137) is occupied whose capdlg is -329972448 in setInvokeId
+04:10:48:ERROR2 InvokeId(131) is occupied whose capdlg is -1506671327 in setInvokeId
+04:13:42:ERROR2 InvokeId(139) is occupied whose capdlg is -329972448 in setInvokeId
+04:13:49:ERROR2 InvokeId(132) is occupied whose capdlg is -1506671327 in setInvokeId
+04:19:42:ERROR2 InvokeId(140) is occupied whose capdlg is -329972448 in setInvokeId
+04:19:48:ERROR2 InvokeId(133) is occupied whose capdlg is -1506671327 in setInvokeId
+04:25:42:ERROR2 InvokeId(142) is occupied whose capdlg is -329972448 in setInvokeId
+04:25:48:ERROR2 InvokeId(134) is occupied whose capdlg is -1506671327 in setInvokeId
+04:28:42:ERROR2 InvokeId(143) is occupied whose capdlg is -329972448 in setInvokeId
+04:28:49:ERROR2 InvokeId(135) is occupied whose capdlg is -1506671327 in setInvokeId
+04:34:42:ERROR2 InvokeId(145) is occupied whose capdlg is -329972448 in setInvokeId
+04:34:49:ERROR2 InvokeId(136) is occupied whose capdlg is -1506671327 in setInvokeId
+04:40:42:ERROR2 InvokeId(146) is occupied whose capdlg is -329972448 in setInvokeId
+04:40:49:ERROR2 InvokeId(137) is occupied whose capdlg is -1506671327 in setInvokeId
+04:43:42:ERROR2 InvokeId(148) is occupied whose capdlg is -329972448 in setInvokeId
+04:43:49:ERROR2 InvokeId(138) is occupied whose capdlg is -1506671327 in setInvokeId
+04:49:42:ERROR2 InvokeId(149) is occupied whose capdlg is -329972448 in setInvokeId
+04:49:49:ERROR2 InvokeId(139) is occupied whose capdlg is -1506671327 in setInvokeId
+04:55:42:ERROR2 InvokeId(151) is occupied whose capdlg is -329972448 in setInvokeId
+04:55:49:ERROR2 InvokeId(140) is occupied whose capdlg is -1506671327 in setInvokeId
+04:58:42:ERROR2 InvokeId(152) is occupied whose capdlg is -329972448 in setInvokeId
+04:58:50:ERROR2 InvokeId(141) is occupied whose capdlg is -1506671327 in setInvokeId
+05:04:42:ERROR2 InvokeId(154) is occupied whose capdlg is -329972448 in setInvokeId
+05:04:49:ERROR2 InvokeId(142) is occupied whose capdlg is -1506671327 in setInvokeId
+05:10:42:ERROR2 InvokeId(155) is occupied whose capdlg is -329972448 in setInvokeId
+05:10:49:ERROR2 InvokeId(143) is occupied whose capdlg is -1506671327 in setInvokeId
+05:13:39:ERROR2 InvokeId(144) is occupied whose capdlg is -1506671327 in setInvokeId
+05:13:39:ERROR2 InvokeId(157) is occupied whose capdlg is -329972448 in setInvokeId
+09:21:52:ERROR1 index[0] out of range, valueSet's size is 0!
+09:53:37:ERROR1 parse sdp msg error when decodeFromCarrier. sdp as follow[148bytes]:
+v=0
+o=- 1525657997 1525657998 IN IP4 127.0.0.1
+c=IN IP4 0.0.0.0
+s=Sip Call
+t=0 0
+m=audio 4917 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=sendonly
+
+
+09:53:37:ERROR1 impl is NULL when getType!
+09:53:37:ERROR1 parse sdp msg error when decodeFromCarrier. sdp as follow[144bytes]:
+v=0
+o=- 1525657997 1525657998 IN IP4 127.0.0.1
+c=IN IP4 0.0.0.0
+s=Sip Call
+t=0 0
+m=audio 4917 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=sendonly
+09:53:37:ERROR1 error in decodeFromCarrier libMsg type[1], carryPara [v=0
+o=- 1525657997 1525657998 IN IP4 127.0.0.1
+c=IN IP4 0.0.0.0
+s=Sip Call
+t=0 0
+m=audio 4917 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+a=sendonly
+].
+09:53:37:ERROR1 impl is NULL when getType!
+10:48:02:ERROR1 index[0] out of range, valueSet's size is 0!
+07:37:59:ERROR1 Send msg(0,36) dlg(1045562656), but dialogueHasBeenEnd!!
+10:08:45:ERROR1 index[0] out of range, valueSet's size is 0!
+10:46:41:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1188750023.
+07:38:51:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1172030439.
+09:09:31:ERROR1 index[0] out of range, valueSet's size is 0!
+SSF日志例检完成
+<end>
+sync、log.sdf等日志分析如下：
+sync.log日志-----------无新增，无需查看
+keytree日志------------无新增，无需查看
+log.sdf日志------------无新增，无需查看
+<end>
+alarm.scf.log日志过滤后如下：
+2018/05/07  Monday  10:19:18    SENDALARM: run init() first.
+2018/05/07  Monday  10:50:12    SENDALARM: run init() first.
+<end>alarm.scf.log日志分析完成：
+
+MANINFO日志分记录如下：
+Mon May  7 08:47:20 2018
+
+08:47:20: unknown dialog[297024b6],38prim16
+08:47:20: 	Operation is 22
+08:47:20: unknown dialog[297024b6],38prim4
+09:44:34: unknown dialog[62331ea5],21prim16
+09:44:34: 	Operation is 22
+09:44:34: unknown dialog[62331ea5],21prim4
+<end>sync、log.sdf等日志分析完成：
+
+<end>AS381主机min01账户例检完成:
