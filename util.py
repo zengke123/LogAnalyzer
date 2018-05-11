@@ -17,8 +17,16 @@ def blocks(file):
     block = []
     for line in lines(file):
         if not line.startswith("<end>"):
+            # 去掉 \n
+            line = line.strip('\n')
+            # 去除左右两侧的空格
+            line = line.lstrip(' ').rstrip(' ')
             block.append(line)
         elif block:
-            yield ''.join(block).strip()
+            #yield ''.join(block).strip()
+            yield block
             block = []
+
+
+
 
