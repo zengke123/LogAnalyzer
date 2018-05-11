@@ -1,0 +1,307 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>主机报表</title>
+<link rel="stylesheet" href="media/report/css/ns_report.css" />
+<link rel="stylesheet" href="media/report/css/ns_report_rsas.css" />
+<script src="media/report/js/jquery-1.7.2.js"></script>
+<script src="media/report/js/common.js"></script>
+</head>
+<body>
+<div id="report" class="wrapper">
+  <!--div class="report_tip"></div-->
+  <div id="head" class="report_title">
+    <h1>例检报告-AS381</h1>
+    <span class="note">&nbsp;</span> 
+  </div>
+  <!--head end,catalog start-->
+  <div id="catalog">
+    <div class="report_h1">目录</div>
+  </div>
+  <div id="content">
+
+
+<div class="report_h report_h1">1.主机概况</div>
+<div class="report_content">
+	<table class="report_table plumb">
+		<tbody>
+			<tr class="odd"">
+				<th width="120" style="vertical-align:middle">主机风险</th>
+				<td style="padding:6px;"> <span class="level_danger high"> 正常 </span>  </td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tr>
+			<td valign="top" style="width:50%;">
+				<table class="report_table plumb">
+					<tbody>
+						<tr class="even">
+							<th width="120">IP地址</th>
+							<td>192.168.251.11</td>
+						</tr>
+						
+						<tr class="odd">
+							<th width="120">操作系统</th>
+							<td>Linux </td>
+						</tr>
+											
+						<tr class="odd">
+							<th>扫描时间</th>
+							<td>2017-06-12 21:04:28</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+        
+
+<div class="report_h report_h1">2.主机性能例检</div>
+<div class="report_content">
+
+	
+	
+    <div class="report_h report_h2">2.1 主机性能</div>
+	<div>
+		<table class="report_table">
+			
+				<tr class="second_title">
+					<th>--</th>
+					<th>--</th>
+					<th>--</th>
+					<th>--</th>
+					<th>--</th>
+				</tr>
+		
+			
+				
+				<tr class="even">
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+				</tr>
+				
+				<tr class="odd">
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+				</tr>	
+				
+				
+				
+				
+			
+		</table>
+	</div>
+	
+	
+	
+	<div class="report_h report_h2">2.2 内存使用</div>
+	<div>
+		<table class="report_table">
+			
+			<tr class="even">
+				<td class="level_danger_low">一般</td>
+
+            </tr>
+			
+			<tr class="odd">
+				<td class="level_danger_high">严重</td>
+
+            </tr>
+			
+            <tr class="even">
+				<td class="level_danger_middle">警告</td>
+
+            </tr>	
+		</table>
+	</div>
+	
+	<div class="report_h report_h2">2.3 IO使用</div>
+	<div>
+		<table class="report_table">
+			
+				<tr class="second_title">
+					<th>Device:</th>
+					<th>rrqm/s</th>
+					<th>r/s</th>
+					<th>w/s</th>
+					<th>rkB/s</th>
+					<th>wkB/s</th>
+					<th>avgrq-sz</th>
+					<th>avgqu-sz</th>
+					<th>await</th>
+					<th>svctm</th>
+					<th>%util</th>
+				</tr>
+			
+			
+				
+				<tr class="even">
+					<td>cciss/c0d0</td>
+					<td>2.33</td>
+					<td>21.94</td>
+					<td>0.61</td>
+					<td>23.54</td>
+					<td>12.31</td>
+					<td>181.93</td>
+					<td>16.09</td>
+					<td>0.01</td>
+					<td>0.61</td>
+					<td>0.06</td>
+				</tr>
+				
+				<tr class="odd">
+					<td>cciss/c0d0p2</td>
+					<td>2.33</td>
+					<td>21.94</td>
+					<td>0.61</td>
+					<td>23.54</td>
+					<td>12.31</td>
+					<td>181.93</td>
+					<td>16.09</td>
+					<td>0.01</td>
+					<td>0.61</td>
+					<td>0.06</td>
+				</tr>	
+				
+				
+				
+				
+			
+		</table>
+	</div>
+</div>
+        
+
+
+<div class="report_h report_h1">3.业务日志例检</div>
+<div class="report_content">
+	
+	
+    <div class="report_h report_h2">3.1 messages日志</div>
+	<div>
+        
+		<table class="report_table" style="word-wrap:break-word;">
+			<tr class="even">
+				<td class="level_danger_low">一般</td>
+
+            </tr>
+			
+			<tr class="odd">
+				<td class="level_danger_high">严重</td>
+
+            </tr>
+			
+            <tr class="even">
+				<td class="level_danger_middle">警告</td>
+			</tr>           
+		</table>
+        
+	</div>
+	
+	
+    <div class="report_h report_h2">3.2 AS381主机min01账户情况如下</div>
+	<div>
+        
+		<table class="report_table" style="word-wrap:break-word;">
+			<tr class="even">
+				<td class="level_danger_low">min01进程启动情况如下:</td>
+
+            </tr>
+			
+			<tr class="odd">
+				<td class="level_danger_high">SCF进程启动-----------正常</td>
+
+            </tr>
+			
+            <tr class="even">
+				<td class="level_danger_middle">MANAGER进程启动-------正常</td>
+			</tr>           
+		</table>
+		
+        
+	</div>
+	
+	
+    <div class="report_h report_h2">3.3 SCF日志记录分析如下:</div>
+	<div>
+        <table class="report_table" style="word-wrap:break-word;">
+			<tr class="even">
+				<td class="level_danger_low">一般</td>
+
+            </tr>
+			
+			<tr class="odd">
+				<td class="level_danger_high">严重</td>
+
+            </tr>
+			
+            <tr class="even">
+				<td class="level_danger_middle">警告</td>
+			</tr>           
+		</table>
+		
+        
+	</div>
+	
+	
+    <div class="report_h report_h2">3.4 SSF日志记录分析如下:</div>
+	<div>
+        <table class="report_table" style="word-wrap:break-word;">
+			<tr class="even">
+				<td class="level_danger_low">一般</td>
+
+            </tr>
+			
+			<tr class="odd">
+				<td class="level_danger_high">严重</td>
+
+            </tr>
+			
+            <tr class="even">
+				<td class="level_danger_middle">警告</td>
+			</tr>           
+		</table>
+		
+        
+	</div>
+	
+	
+</div>
+        
+    
+    
+
+
+  <!--div class="report_tip"></div-->
+</div>
+<script type="text/javascript">
+	function getPageY(element){
+	  	return element.offsetTop + (element.offsetParent ? arguments.callee(element.offsetParent) : 0) 
+	}
+	jQuery(function($){
+		//window.dialog = new UI.Dialog({name:'dialog'});
+		$("#catalog_tree").report_tree();
+		$("#report").catalog();
+		$('#catalog').delegate('a.link', 'click', function(event){
+        	event.preventDefault();
+		    $("#catalog").find("div.report_content").hide();
+            $("#catalog").find(".h1_dot").addClass("up");
+            jumpToHash(event.target.hash);
+		});
+		$.gotop();
+	});
+</script>
+</body>
+</html>
