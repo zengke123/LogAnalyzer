@@ -69,20 +69,33 @@ class TableRule():
         handler.end('title_h2')
 
     def formatTable(self, block, handler):
-        # 表头
+        # 取数据按空格分列的最小列数，其他行数据按此列数对齐
+        datas = [re.split('[ ]+',line) for line in block]
+        num = min(len(line) for line in datas)
+        finalData = []
+        for line in datas:
+            point = num - len(line)
+            if point < 0:
+                temp_data = line[point-1:]
+                line = line[:point-1]
+                temp_data = "&nbsp;".join(map(str, temp_data))
+                line.append(temp_data)
+            finalData.append(line)
+
         handler.start('tr', 'second_title')
-        for data in re.split('[ ]+',block[0]):
+        for data in finalData[0]:
             handler.start('th')
             handler.feed(data)
             handler.end('th')
         handler.end('tr')
         # 表数据
-        for i, line in enumerate(block[1:]):
+        #
+        for i, line in enumerate(finalData[1:]):
             if i % 2 == 0:
                 handler.start('tr','even')
             else:
                 handler.start('tr', 'odd')
-            for data in re.split('[ ]+',line):
+            for data in line:
                 handler.start('td')
                 handler.feed(data)
                 handler.end('td')
