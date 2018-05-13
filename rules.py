@@ -28,7 +28,7 @@ class LogRule():
     """
 
     def condition(self, block):
-        # 第一行以'<log>'开头判定为表格
+        # 第一行以'<log>'开头判定为日志
         return block[0].startswith('<log>')
 
     def action(self, block, handler):
@@ -41,6 +41,7 @@ class LogRule():
             else:
                 handler.start('tr', 'odd')
             handler.start('td')
+            line = line.replace(" ", "&nbsp;")
             handler.feed(line)
             handler.end('td')
             handler.end('tr')
@@ -71,10 +72,12 @@ class TableRule():
     def formatTable(self, block, handler):
         # 取数据按空格分列的最小列数，其他行数据按此列数对齐
         datas = [re.split('[ ]+',line) for line in block]
+        # 分列处理后的最小列数
         num = min(len(line) for line in datas)
         finalData = []
         for line in datas:
             point = num - len(line)
+            # 将最后多出的列数进行合并
             if point < 0:
                 temp_data = line[point-1:]
                 line = line[:point-1]
@@ -89,7 +92,6 @@ class TableRule():
             handler.end('th')
         handler.end('tr')
         # 表数据
-        #
         for i, line in enumerate(finalData[1:]):
             if i % 2 == 0:
                 handler.start('tr','even')
@@ -108,7 +110,7 @@ class MixTableRule(TableRule):
     """
 
     def condition(self, block):
-        # 第一行以'<table>'开头判定为表格,且日志与表格中间空行分割
+        # 第一行以'<table>'开头判定为表格,且日志与表格中间有空行
         return block[0].startswith('<table>') and  '' in block
 
 
