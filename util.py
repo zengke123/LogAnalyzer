@@ -24,6 +24,15 @@ def blocks(file):
             block.append(line)
         elif block:
             #yield ''.join(block).strip()
+            # 去除文本块前后多余空行
+            i = 0
+            for i ,data in enumerate(block):
+                if data is not "": break
+            block = block[i:]
+            for i ,data in enumerate(block[::-1]):
+                if data is not "": break
+            if i != 0:
+                block = block[:-i]
             yield block
             block = []
 
