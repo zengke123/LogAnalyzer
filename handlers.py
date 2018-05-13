@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # 为文本块打上 HTML 标记
 
+from logger import logger
+
 class Handler:
     """
     处理程序父类
@@ -22,51 +24,51 @@ class HTMLRenderer(Handler):
     """
 
     def start_title_h1(self, title):
-        print('<div class="report_h report_h1">' + str(title) + '</div>\n<div class="report_content">')
+        logger.info('<div class="report_h report_h1">' + str(title) + '</div>\n<div class="report_content">')
 
     def end_title_h1(self):
-        print('</div>')
+        logger.info('</div>')
 
     def start_title_h2(self,title):
-        print('<div class="report_h report_h2">'+ str(title) + '</div>\n<div>')
+        logger.info('<div class="report_h report_h2">'+ str(title) + '</div>\n<div>')
 
     def end_title_h2(self):
-        print('</div>')
+        logger.info('</div>')
 
     def start_tr(self,css_name):
         # css_name in (even,odd,second_title)
-        print('<tr class="'+ str(css_name) + '">')
+        logger.info('<tr class="'+ str(css_name) + '">')
 
     def end_tr(self):
-        print('</tr>')
+        logger.info('</tr>')
 
     # def start_th(self, width):
     #     print('<th width=' + str(width)  + '>')
 
     def start_th(self):
-        print('<th>')
+        logger.info('<th>')
 
     def end_th(self):
-        print('</th>')
+        logger.info('</th>')
 
     def start_td(self):
-        print('<td>')
+        logger.info('<td>')
 
     def end_td(self):
-        print('</td>')
+        logger.info('</td>')
 
     def start_table(self):
-        print('<table class="report_table">')
+        logger.info('<table class="report_table">')
 
     def end_table(self):
-        print('</table>')
+        logger.info('</table>')
 
     def feed(self, data):
-        print(data)
+        logger.info(data)
 
 
 
-    def start_head(self):
+    def start_head(self,hostname):
         header = '''
         <!DOCTYPE html>
         <html>
@@ -81,9 +83,9 @@ class HTMLRenderer(Handler):
         <body>
 	
         <div id="report" class="wrapper">
-          <!--div class="report_tip"></div-->
+          <div class="report_tip"></div>
           <div id="head" class="report_title">
-            <h1>例检报告-AS381</h1>
+            <h1>例检报告-{}</h1>
             <span class="note">&nbsp;</span> 
           </div>
           <!--head end,catalog start-->
@@ -91,8 +93,8 @@ class HTMLRenderer(Handler):
             <div class="report_h1">目录</div>
           </div>
           <div id="content">
-        '''
-        print(header)
+        '''.format(hostname)
+        logger.info(header)
 
     def end_head(self):
         end_header = '''
@@ -116,4 +118,4 @@ class HTMLRenderer(Handler):
         </body>
         </html>
         '''
-        print(end_header)
+        logger.info(end_header)
