@@ -40,13 +40,24 @@ class LogRule():
                 handler.start('tr','even')
             else:
                 handler.start('tr', 'odd')
-            handler.start('td')
-            line = line.replace(" ", "&nbsp;")
+            level = self.check(line)
+            handler.start('td',level)
+            line = "<pre>" + line + "</pre>"
             handler.feed(line)
             handler.end('td')
             handler.end('tr')
         handler.end('table')
         handler.end('title_h2')
+
+    def check(self,line):
+        if "<ERROR>" in line or  "ERROR" in line:
+            level = "level_danger_high"
+        elif "<WARN>" in line:
+            level = "level_danger_middle"
+        else:
+            level = "level_danger_low"
+        return level
+
 
 
 class TableRule():

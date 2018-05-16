@@ -51,8 +51,12 @@ class HTMLRenderer(Handler):
     def end_th(self):
         logger.info('</th>')
 
-    def start_td(self):
-        logger.info('<td>')
+    def start_td(self, level=None):
+        if level is None:
+            logger.info('<td>')
+        else:
+            # level(level_danger_low,level_danger_middle,level_danger_high)分别对应不同的颜色
+            logger.info('<td class="' + str(level) + '">')
 
     def end_td(self):
         logger.info('</td>')
@@ -79,6 +83,7 @@ class HTMLRenderer(Handler):
         <link rel="stylesheet" href="media/report/css/ns_report_rsas.css" />
         <script src="media/report/js/jquery-1.7.2.js"></script>
         <script src="media/report/js/common.js"></script>
+        <style>pre{}</style>
         </head>
         <body>
 	
@@ -93,7 +98,7 @@ class HTMLRenderer(Handler):
             <div class="report_h1">目录</div>
           </div>
           <div id="content">
-        '''.format(hostname)
+        '''.format('{font-size: 13px; font-family: "黑体";}',hostname)
         logger.info(header)
 
     def end_head(self):
