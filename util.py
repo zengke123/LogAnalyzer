@@ -35,7 +35,3 @@ def blocks(file):
                 block = block[:-i]
             yield block
             block = []
-
-
-
-

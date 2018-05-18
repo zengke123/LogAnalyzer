@@ -23,9 +23,12 @@ class Parser:
         self.rules.append(rule)
 
     def parse(self, file, hostname):
-        """
-        解析
-        """
+        '''
+        解析日志生成html
+        :param file: 文件对象
+        :param hostname: 主机名
+        :return: 根据Rule类匹配的告警日志
+        '''
         self.handler.start('head',hostname)
         first_title_h1 = 0
         result = []
@@ -51,6 +54,13 @@ class Parser:
 
 
     def index(self,CheckTime, HostNum, Alarm):
+        '''
+        生成index.html
+        :param CheckTime: 例检时间
+        :param HostNum: 例检主机数量
+        :param Alarm: 告警日志,类型为Dict
+        :return: None
+        '''
         self.handler.start("index", CheckTime, HostNum)
         for k, v in Alarm.items():
             data = ""
@@ -93,27 +103,28 @@ class LogParser(Parser):
         self.addRule(MixTableRule())
 
 if __name__ == '__main__':
-    LogPath = "log" + os.sep
-    HtmlPath = "output" + os.sep + "host" + os.sep
-    FileList = os.listdir(LogPath)
+    # 日志存放路径
+    logPath = "log" + os.sep
+    # html文件生成路径
+    htmlPath = "output" + os.sep + "host" + os.sep
+    fileList = os.listdir(logPath)
     # 需呈现在index中的告警日志,由Rule类匹配，通过Parse类提取并返回
     result = {}
     # 生成主机例检报告
     handler = HTMLRenderer()
     parser = LogParser(handler)
-    for file in FileList:
+    for file in fileList:
         hostname = file.split('.')[0]
-        output = HtmlPath + hostname + ".html"
+        output = htmlPath + hostname + ".html"
         # 开始解析
         with LogSave(output):
-            with open(LogPath + file, 'r') as f:
+            with open(logPath + file, 'r') as f:
                 # 解析，返回提取到的告警日志
                 alarms = parser.parse(f, hostname)
                 result[hostname] = alarms
-
     # 生成汇总报告
-    HostNum = len(FileList)
-    CheckTime = FileList[0].split('.')[1]
+    hostNum = len(fileList)
+    checkTime = fileList[0].split('.')[1]
     with LogSave("output" + os.sep + "index.html"):
-        parser.index(CheckTime,HostNum,result)
+        parser.index(checkTime,hostNum,result)
 
