@@ -124,3 +124,57 @@ class HTMLRenderer(Handler):
         </html>
         '''
         logger.info(end_header)
+
+    # 生成index页面单独部分
+    def start_index(self,CheckTime, CheckHosts):
+        head = '''
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>报表</title>
+        <link rel="stylesheet" href="host/media/report/css/ns_report.css" />
+        <link rel="stylesheet" href="host/media/report/ns_report_rsas.css" />
+        
+        </head>
+        <body>
+        <div id="report" class="wrapper_w800">
+          <div class="report_tip"></div>
+          <div  id="head"  class="report_title">
+            <h1>例检报告</h1>
+            <span class="note">&nbsp;</span> </div>
+        
+          <div id="content"><div class="report_h report_h1">1.例检信息</div>
+        <div class="report_content">
+            <table class="report_table plumb">
+                <tr class="odd">
+                    <td width="120px" >例检时间</td>
+                    <td>{}</td>
+                </tr>
+                <tr class="even">
+                    <td>主机数量</td>
+                    <td>检查主机：{}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="report_h report_h1">2.主机列表</div>
+        <div class="report_content">
+        <table class="report_table">
+        <tr class="second_title">
+        <th width="120px">主机名</th>
+        <th>结果</th>
+	    </tr>
+        '''.format(CheckTime, CheckHosts)
+        logger.info(head)
+
+    def end_index(self):
+        end = '''
+        </table>
+        </div>
+        <div class="report_tip"></div>
+        </div>
+        </div>
+        </body>
+        </html>
+        '''
+        logger.info(end)

@@ -6,6 +6,7 @@ from handlers import *
 from util import *
 from rules import *
 from logger import *
+from copy import deepcopy
 
 class Parser:
     """
@@ -27,6 +28,7 @@ class Parser:
         """
         self.handler.start('head',hostname)
         first_title_h1 = 0
+        result = []
         for block in blocks(file):
             for rule in self.rules:
                 if rule.condition(block):
@@ -34,11 +36,50 @@ class Parser:
                         first_title_h1 += 1
                         # 匹配只要不是第一个一级标题，增加</div>结束标签
                         if first_title_h1 !=1 : self.handler.end('title_h1')
-                    last = rule.action(block, self.handler)
-                    if last: break
+                    rule.action(block, self.handler)
+
+                    # 提取识别到的告警日志
+                    if len(rule.alarms) != 0:
+                        # 可变对象，需要使用深拷贝
+                        temp = deepcopy(rule.alarms)
+                        result.extend(temp)
+                # 清空告警，避免重复
+                rule.clear_alarm()
         self.handler.end('title_h1')
         self.handler.end('head')
+        return result
 
+
+    def index(self,CheckTime, HostNum, Alarm):
+        self.handler.start("index", CheckTime, HostNum)
+        for k, v in Alarm.items():
+            data = ""
+            self.handler.start("tr", "odd")
+            self.handler.start("td")
+            if len(v) != 0:
+                if "level_danger_high" in [alarm.level for alarm in v]:
+                    level = "level_danger_high"
+                else:
+                    level = "level_danger_middle"
+                for alarm in v:
+                    if alarm.title not in data:
+                        data = data + alarm.title + "<br>" + alarm.content +"<br>"
+                    else:
+                        data = data + alarm.content + "<br>"
+
+            else:
+                level = "level_danger_low"
+                data = "无异常"
+            info = '''
+                    <img align='absmiddle' src='host/media/report/images/{}.gif'></img><a href="host/{}.html" target="_blank">{}</a>
+                    '''.format(level, k, k)
+            self.handler.feed(info)
+            self.handler.end("td")
+            self.handler.start("td")
+            self.handler.feed(data)
+            self.handler.end("td")
+            self.handler.end("tr")
+        self.handler.end("index")
 
 class LogParser(Parser):
     """
@@ -52,11 +93,12 @@ class LogParser(Parser):
         self.addRule(MixTableRule())
 
 if __name__ == '__main__':
-    # file1 = "AS381.201805071050.txt"
-    # file2 = "AS382.201805071050 - 副本.txt"
     LogPath = "log" + os.sep
     HtmlPath = "output" + os.sep + "host" + os.sep
     FileList = os.listdir(LogPath)
+    # 需呈现在index中的告警日志,由Rule类匹配，通过Parse类提取并返回
+    result = {}
+    # 生成主机例检报告
     handler = HTMLRenderer()
     parser = LogParser(handler)
     for file in FileList:
@@ -65,4 +107,13 @@ if __name__ == '__main__':
         # 开始解析
         with LogSave(output):
             with open(LogPath + file, 'r') as f:
-                parser.parse(f, hostname)
+                # 解析，返回提取到的告警日志
+                alarms = parser.parse(f, hostname)
+                result[hostname] = alarms
+
+    # 生成汇总报告
+    HostNum = len(FileList)
+    CheckTime = FileList[0].split('.')[1]
+    with LogSave("output" + os.sep + "index.html"):
+        parser.index(CheckTime,HostNum,result)
+
