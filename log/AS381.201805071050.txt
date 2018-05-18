@@ -1,4 +1,7 @@
-AS381主机性能情况如下:
+<h1> 1.主机性能例检
+
+<end>
+<table>AS381主机性能情况如下:
 top - 10:50:23 up 11 days, 18:54,  0 users,  load average: 9.63, 10.71, 10.75
 Tasks: 380 total,  10 running, 370 sleeping,   0 stopped,   0 zombie
 Cpu(s):  3.9%us,  1.5%sy,  0.0%ni, 94.3%id,  0.0%wa,  0.0%hi,  0.2%si,  0.0%st
@@ -17,7 +20,7 @@ Swap:  2031608k total,        0k used,  2031608k free, 11987856k cached
 20010 min01     15   0 1541m 103m  72m S  7.7  0.3 316:29.86 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 20012 min01     15   0 1541m 103m  71m R  7.7  0.3 319:10.06 scf.mul                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 <end>
-AS381主机内存使用最高的10个进程
+<table>AS381主机内存使用最高的10个进程
   PID USER     %CPU   RSZ COMMAND
 19757 min01     2.2 106972 scf.mul 1 21 87
 20194 min01     2.2 107064 scf.mul 1 21 82
@@ -30,9 +33,7 @@ AS381主机内存使用最高的10个进程
 15436 sigtx     0.6 194044 sigTX
   748 min01     0.1 281364 tmnrun 1 99 1
 <end>
-AS381主机io使用情况
-Linux 2.6.18-371.el5 (AS381) 	05/07/2018
-
+<table>AS381主机io使用情况
 Device:         rrqm/s   wrqm/s   r/s   w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await  svctm  %util
 cciss/c0d0        2.33    21.94  0.61 23.54    12.31   181.93    16.09     0.01    0.61   0.06   0.15
 cciss/c0d0p1      0.00     0.00  0.00  0.00     0.01     0.00   111.21     0.00    0.81   0.62   0.00
@@ -40,21 +41,20 @@ cciss/c0d0p2      2.33    21.94  0.61 23.54    12.30   181.93    16.09     0.01 
 dm-0              0.00     0.00  0.04  8.25     0.40    32.99     8.06     0.00    0.23   0.02   0.02
 dm-1              0.00     0.00  0.00  0.00     0.00     0.00     8.00     0.00    1.45   0.26   0.00
 dm-2              0.00     0.00  2.90 37.23    11.89   148.94     8.01     0.03    0.59   0.15   0.60
-
 <end>
-AS381主机硬盘使用情况
+<table>AS381主机硬盘使用情况
 Filesystem           1K-blocks      Used Available Use% Mounted on
-/dev/mapper/hdvg-rootlv
-                      30472188   4968368  23930956  18% /
+/dev/mapper/hdvg-rootlv 30472188   4968368  23930956  18% /
 /dev/cciss/c0d0p1       101086     17995     77872  19% /boot
 tmpfs                 16328660         0  16328660   0% /dev/shm
-/dev/mapper/hdvg-homelv
-                     542896880 128449360 386869972  25% /home
+/dev/mapper/hdvg-homelv 542896880 128449360 386869972  25% /home
 <end>
-messages日志记录------无新增
+<h1>2.业务日志例检
 <end>
-
-AS381主机min01账户情况如下:
+<log>messages日志记录:
+无新增
+<end>
+<log>AS381主机min01账户情况如下:
 min01进程启动情况如下:
 SCF进程启动-----------正常
 MANAGER进程启动-------正常
@@ -62,30 +62,28 @@ SYNC进程启动----------正常
 KEYTREE进程启动-------正常
 TMNRUN进程启动--------正常
 <end>min01进程情况分析完毕:
-
-SCF日志记录分析如下:
-99]行:              [TimerExpire when WaitforATIResult日志]                      [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
-[2]行:               [timerID_global timer is time out日志]                       [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
-[[33506]行:           [Timeout when wait UDA(LOC)日志]                             [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+<log>SCF日志记录分析如下:
+[99]行:              [TimerExpire when WaitforATIResult日志]                      [<INFO>通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
+[2]行:               [timerID_global timer is time out日志]                       [<INFO>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[33506]行:           [Timeout when wait UDA(LOC)日志]                             [<WARN>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
 [12455]行:           [Can not get User-Data日志]                                  [通常为：UDA无法解析日志，一般为HSS回复消息错误导致，无需太过关注]                        
 [67]行:              [Timeout when wait ATI_ACK日志]                              [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
 [3]行:               [Not received Response日志]                                  [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]                              
-[4257]行:            [Can not get resultCode日志]                                 [通常为：UDA无法解析日志，一般为HSS回复消息错误导致i，无需太过关注]                       
+[4257]行:            [Can not get resultCode日志]                                 [<ERROR>通常为：UDA无法解析日志，一般为HSS回复消息错误导致i，无需太过关注]                       
 [6418]行:            [message (3,70)日志]                                         [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
 [206]行:             [Timeout when wait UDA(T-ADS)日志]                           [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
-[26]行:              [number.*invalid日志]                                        [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
-[6]行:               [code is not DIAMETER_SUCCESS日志]                           [通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
-[3009]行:            [invalid number [0-9A-Z\#\*]\{1,10\} to get area number日志] [通常为：小于11位的号码,无需获取区号，可忽略]                                             
-[2472]行:            [invalid number [2-9]日志]                                   [通常为：2~9开头的号码,无需获取区号，可忽略]                                              
-[1036]行:            [invalid number 0日志]                                       [通常为：0开头的号码,无需获取区号，可忽略]                                                
-[488]行:             [invalid number 1[0-2]日志]                                  [通常为：10~12开头的号码,无需获取区号，可忽略]                                            
-[427]行:             [invalid number [0-9]\{12,\} to get area number日志]         [通常为：大于11位的号码,无需获取区号，可忽略]                                             
-[10]行:              [invalid number [\#\*]日志]                                  [通常为：特殊字符开头号码，无需获取区号，可忽略]                                          
-[43]行:              [send msg(2,14), but dialogueHasBeenEnd日志]                 [通常为：收到异常TC_END消息日志，可忽略]                                                  
-[39]行:              [msgID=60,msgType=3日志]                                     [通常为：收到异常tcend消息，无需处理]                                                     
+[26]行:              [number.*invalid日志]                                        [<INFO>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]                              
+[6]行:               [code is not DIAMETER_SUCCESS日志]                           [<INFO>通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
+[3009]行:            [invalid number [0-9A-Z\#\*]\{1,10\} to get area number日志] [<INFO>通常为：小于11位的号码,无需获取区号，可忽略]                                             
+[2472]行:            [invalid number [2-9]日志]                                   [<INFO>通常为：2~9开头的号码,无需获取区号，可忽略]                                              
+[1036]行:            [invalid number 0日志]                                       [<INFO>通常为：0开头的号码,无需获取区号，可忽略]                                                
+[488]行:             [invalid number 1[0-2]日志]                                  [<INFO>通常为：10~12开头的号码,无需获取区号，可忽略]                                            
+[427]行:             [invalid number [0-9]\{12,\} to get area number日志]         [<INFO>通常为：大于11位的号码,无需获取区号，可忽略]                                             
+[10]行:              [invalid number [\#\*]日志]                                  [<INFO>通常为：特殊字符开头号码，无需获取区号，可忽略]                                          
+[43]行:              [send msg(2,14), but dialogueHasBeenEnd日志]                 [<INFO>通常为：收到异常TC_END消息日志，可忽略]                                                  
+[39]行:              [msgID=60,msgType=3日志]                                     [<INFO>通常为：收到异常tcend消息，无需处理]                                                     
 <end>
-
-过滤后日志如下，需要关注
+<log>SCF过滤后日志如下，需要关注
 07:15:37 -1876653853(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003395 to get area number
 09:49:59 -1876612874(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16194353697 to get area number
 09:54:59 can not find fsm -1876611007 for a message (1,31)
@@ -218,18 +216,17 @@ SCF日志记录分析如下:
 10:43:57 -1104863701(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number
 10:45:37 can not find fsm -1104863113 for a message (1,31)
 <end>SCF日志例检完成
-
-SSF日志记录分析如下:
+<log>SSF日志记录分析如下:
 [11893]行:           [should check diametermsg.xml日志]                           [通常为：dia消息字典问题报错，不影响业务，可忽略]                                         
 [19024]行:           [Find FsmInsance is 0日志]                                   [通常为：呼叫释放后收到bye消息日志，可忽略]                                               
 [12061]行:           [when Job is over日志]                                       [通常为：呼叫结束后收到错误INVITE消息，可忽略]                                            
 [14771]行:           [Trace日志]                                                  [通常为：trace日志，可忽略]                                                               
 [18175]行:           [the Job is over日志]                                        [通常为：呼叫结束后收到错误INVITE消息，可忽略]                                            
 [6678]行:            [find  route item when modifyOuterRoute日志]                 [通常为：消息到达后台时，对应呼叫已经释放，所以无路由，无需太过关注]                      
-[3911]行:            [TLibATIResImpl日志]                                         [通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
+[3911]行:            [TLibATIResImpl日志]                                         [<ERROR>通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]                          
 [126]行:             [INFO日志]                                                   [通常为：小scf-INFO级别日志，可忽略]    
 <end>                                                  
-过滤后日志如下，需要关注
+<log>SSF过滤后日志如下，需要关注
 09:40:16:ERROR1 index[0] out of range, valueSet's size is 0!
 08:21:36:ERROR1 index[0] out of range, valueSet's size is 0!
 10:03:30:ERROR1 index[0] out of range, valueSet's size is 0!
@@ -340,17 +337,16 @@ a=sendonly
 09:09:31:ERROR1 index[0] out of range, valueSet's size is 0!
 SSF日志例检完成
 <end>
-sync、log.sdf等日志分析如下：
+<log>sync、log.sdf等日志分析如下：
 sync.log日志-----------无新增，无需查看
 keytree日志------------无新增，无需查看
 log.sdf日志------------无新增，无需查看
 <end>
-alarm.scf.log日志过滤后如下：
+<log>alarm.scf.log日志过滤后如下：
 2018/05/07  Monday  10:19:18    SENDALARM: run init() first.
 2018/05/07  Monday  10:50:12    SENDALARM: run init() first.
 <end>alarm.scf.log日志分析完成：
-
-MANINFO日志分记录如下：
+<log>MANINFO日志分记录如下：
 Mon May  7 08:47:20 2018
 
 08:47:20: unknown dialog[297024b6],38prim16
@@ -360,5 +356,4 @@ Mon May  7 08:47:20 2018
 09:44:34: 	Operation is 22
 09:44:34: unknown dialog[62331ea5],21prim4
 <end>sync、log.sdf等日志分析完成：
-
 <end>AS381主机min01账户例检完成:
