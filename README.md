@@ -5,3 +5,10 @@
 +  rules.py：规则,用来识别每个文本块交给处理程序将要加什么标记
 +  logger.py：控制输出到文件
 +  parse.py：主程序，自动解析log目录下所有日志文件、生成html文件，并汇总到index.html,所有html文件存放在output目录下
+
+示例
++ index
+![image](https://github.com/zengke123/LogAnalyzer/blob/master/output/demo/index.png)
+
++ 主机
+![image](https://github.com/zengke123/LogAnalyzer/blob/master/output/demo/AS381.png)
