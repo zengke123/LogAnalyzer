@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="media/report/css/ns_report_rsas.css" />
         <script src="media/report/js/jquery-1.7.2.js"></script>
         <script src="media/report/js/common.js"></script>
+        <style>pre{font-size: 13px; font-family: "黑体";}</style>
         </head>
         <body>
 	
         <div id="report" class="wrapper">
-          <!--div class="report_tip"></div-->
+          <div class="report_tip"></div>
           <div id="head" class="report_title">
             <h1>例检报告-AS381</h1>
             <span class="note">&nbsp;</span> 
@@ -23,428 +24,2505 @@
           </div>
           <div id="content">
         
-<div class="report_h report_h1">主机性能例检</div>
+<div class="report_h report_h1"> 1.主机性能例检</div>
 <div class="report_content">
-识别到MIXTABLE
 <div class="report_h report_h2">AS381主机性能情况如下:</div>
 <div>
 <table class="report_table">
-<tr class="even">
+<tr class="odd">
 <td>
 top - 10:50:23 up 11 days, 18:54,  0 users,  load average: 9.63, 10.71, 10.75
 </td>
+</tr>
+<tr class="odd">
 <td>
 Tasks: 380 total,  10 running, 370 sleeping,   0 stopped,   0 zombie
 </td>
+</tr>
+<tr class="odd">
 <td>
 Cpu(s):  3.9%us,  1.5%sy,  0.0%ni, 94.3%id,  0.0%wa,  0.0%hi,  0.2%si,  0.0%st
 </td>
+</tr>
+<tr class="odd">
 <td>
 Mem:  32657320k total, 15089056k used, 17568264k free,   372156k buffers
 </td>
+</tr>
+<tr class="odd">
 <td>
 Swap:  2031608k total,        0k used,  2031608k free, 11987856k cached
 </td>
 </tr>
+</table>
+<table class="report_table">
+<tr class="second_title">
 <th>
-P
+PID
+</th>
+<th>
+USER
+</th>
+<th>
+PR
+</th>
+<th>
+NI
+</th>
+<th>
+VIRT
+</th>
+<th>
+RES
+</th>
+<th>
+SHR
+</th>
+<th>
+S
+</th>
+<th>
+%CPU
+</th>
+<th>
+%MEM
+</th>
+<th>
+TIME+
+</th>
+<th>
+COMMAND
 </th>
 </tr>
 <tr class="even">
 <td>
-I
-</td>
-</tr>
-<tr class="odd">
-<td>
-D
-</td>
-</tr>
-<tr class="even">
-<td>
-
+610
 </td>
 <td>
-
+min01
 </td>
-</tr>
-<tr class="odd">
 <td>
-U
+15
 </td>
-</tr>
-<tr class="even">
+<td>
+0
+</td>
+<td>
+33672
+</td>
+<td>
+3480
+</td>
+<td>
+1200
+</td>
 <td>
 S
 </td>
-</tr>
-<tr class="odd">
 <td>
-E
-</td>
-</tr>
-<tr class="even">
-<td>
-R
-</td>
-</tr>
-<tr class="odd">
-<td>
-
+9.7
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
+0.0
 </td>
 <td>
-
+682:45.52
+</td>
+<td>
+msgr
 </td>
 </tr>
 <tr class="odd">
 <td>
-
+20331
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
+min01
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="odd">
-<td>
-
+15
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
+0
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="odd">
-<td>
-P
-</td>
-</tr>
-<tr class="even">
-<td>
-R
-</td>
-</tr>
-<tr class="odd">
-<td>
-
+1491m
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
+103m
 </td>
 <td>
-
+71m
 </td>
-</tr>
-<tr class="odd">
-<td>
-N
-</td>
-</tr>
-<tr class="even">
-<td>
-I
-</td>
-</tr>
-<tr class="odd">
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
-<tr class="odd">
-<td>
-V
-</td>
-</tr>
-<tr class="even">
-<td>
-I
-</td>
-</tr>
-<tr class="odd">
-<td>
-R
-</td>
-</tr>
-<tr class="even">
-<td>
-T
-</td>
-</tr>
-<tr class="odd">
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
-<tr class="odd">
-<td>
-R
-</td>
-</tr>
-<tr class="even">
-<td>
-E
-</td>
-</tr>
-<tr class="odd">
 <td>
 S
 </td>
-</tr>
-<tr class="even">
 <td>
-
+9.7
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="odd">
-<td>
-
+0.3
 </td>
 <td>
-
+318:17.98
+</td>
+<td>
+scf.mul
 </td>
 </tr>
 <tr class="even">
+<td>
+603
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+33768
+</td>
+<td>
+3688
+</td>
+<td>
+1200
+</td>
 <td>
 S
 </td>
+<td>
+7.7
+</td>
+<td>
+0.0
+</td>
+<td>
+489:47.27
+</td>
+<td>
+msgr
+</td>
 </tr>
 <tr class="odd">
 <td>
-H
+608
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+34064
+</td>
+<td>
+3560
+</td>
+<td>
+1200
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.0
+</td>
+<td>
+579:56.46
+</td>
+<td>
+msgr
 </td>
 </tr>
 <tr class="even">
+<td>
+609
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+30516
+</td>
+<td>
+3252
+</td>
+<td>
+1200
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.0
+</td>
+<td>
+435:20.05
+</td>
+<td>
+msgr
+</td>
+</tr>
+<tr class="odd">
+<td>
+19666
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+1753m
+</td>
+<td>
+118m
+</td>
+<td>
+72m
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.4
+</td>
+<td>
+321:15.51
+</td>
+<td>
+scf.mul
+</td>
+</tr>
+<tr class="even">
+<td>
+19771
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+1555m
+</td>
+<td>
+103m
+</td>
+<td>
+71m
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.3
+</td>
+<td>
+317:31.74
+</td>
+<td>
+scf.mul
+</td>
+</tr>
+<tr class="odd">
+<td>
+20007
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+1495m
+</td>
+<td>
+102m
+</td>
+<td>
+71m
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.3
+</td>
+<td>
+315:39.67
+</td>
+<td>
+scf.mul
+</td>
+</tr>
+<tr class="even">
+<td>
+20010
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+1541m
+</td>
+<td>
+103m
+</td>
+<td>
+72m
+</td>
+<td>
+S
+</td>
+<td>
+7.7
+</td>
+<td>
+0.3
+</td>
+<td>
+316:29.86
+</td>
+<td>
+scf.mul
+</td>
+</tr>
+<tr class="odd">
+<td>
+20012
+</td>
+<td>
+min01
+</td>
+<td>
+15
+</td>
+<td>
+0
+</td>
+<td>
+1541m
+</td>
+<td>
+103m
+</td>
+<td>
+71m
+</td>
 <td>
 R
 </td>
-</tr>
-<tr class="odd">
 <td>
-
+7.7
 </td>
 <td>
-
-</td>
-</tr>
-<tr class="even">
-<td>
-S
-</td>
-</tr>
-<tr class="odd">
-<td>
-
+0.3
 </td>
 <td>
-
+319:10.06
+</td>
+<td>
+scf.mul
 </td>
 </tr>
-<tr class="even">
-<td>
-%
-</td>
-</tr>
-<tr class="odd">
-<td>
-C
-</td>
-</tr>
-<tr class="even">
-<td>
-P
-</td>
-</tr>
-<tr class="odd">
-<td>
-U
-</td>
+</table>
+</div>
+<div class="report_h report_h2">AS381主机内存使用最高的10个进程</div>
+<div>
+<table class="report_table">
+<tr class="second_title">
+<th>
+PID
+</th>
+<th>
+USER
+</th>
+<th>
+%CPU
+</th>
+<th>
+RSZ
+</th>
+<th>
+COMMAND
+</th>
 </tr>
 <tr class="even">
 <td>
-
+19757
 </td>
 <td>
-
+min01
 </td>
-</tr>
-<tr class="odd">
 <td>
-%
+2.2
 </td>
-</tr>
-<tr class="even">
 <td>
-M
+106972
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;87
 </td>
 </tr>
 <tr class="odd">
 <td>
-E
+20194
+</td>
+<td>
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+107064
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;82
 </td>
 </tr>
 <tr class="even">
 <td>
-M
+20196
+</td>
+<td>
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+107088
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;97
 </td>
 </tr>
 <tr class="odd">
 <td>
-
+901
 </td>
 <td>
-
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+107796
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;101
 </td>
 </tr>
 <tr class="even">
 <td>
-
+19758
 </td>
 <td>
-
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+107904
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;89
 </td>
 </tr>
 <tr class="odd">
 <td>
-
+19666
 </td>
 <td>
-
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+121400
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;107
 </td>
 </tr>
 <tr class="even">
 <td>
-
+895
 </td>
 <td>
-
+min01
+</td>
+<td>
+2.2
+</td>
+<td>
+124360
+</td>
+<td>
+scf.mul&nbsp;1&nbsp;21&nbsp;95
 </td>
 </tr>
 <tr class="odd">
 <td>
-T
+615
+</td>
+<td>
+min01
+</td>
+<td>
+0.0
+</td>
+<td>
+190980
+</td>
+<td>
+keytree&nbsp;1&nbsp;25&nbsp;1
 </td>
 </tr>
 <tr class="even">
 <td>
-I
+15436
+</td>
+<td>
+sigtx
+</td>
+<td>
+0.6
+</td>
+<td>
+194044
+</td>
+<td>
+sigTX
 </td>
 </tr>
 <tr class="odd">
 <td>
-M
+748
 </td>
+<td>
+min01
+</td>
+<td>
+0.1
+</td>
+<td>
+281364
+</td>
+<td>
+tmnrun&nbsp;1&nbsp;99&nbsp;1
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">AS381主机io使用情况</div>
+<div>
+<table class="report_table">
+<tr class="second_title">
+<th>
+Device:
+</th>
+<th>
+rrqm/s
+</th>
+<th>
+wrqm/s
+</th>
+<th>
+r/s
+</th>
+<th>
+w/s
+</th>
+<th>
+rkB/s
+</th>
+<th>
+wkB/s
+</th>
+<th>
+avgrq-sz
+</th>
+<th>
+avgqu-sz
+</th>
+<th>
+await
+</th>
+<th>
+svctm
+</th>
+<th>
+%util
+</th>
 </tr>
 <tr class="even">
 <td>
-E
+cciss/c0d0
+</td>
+<td>
+2.33
+</td>
+<td>
+21.94
+</td>
+<td>
+0.61
+</td>
+<td>
+23.54
+</td>
+<td>
+12.31
+</td>
+<td>
+181.93
+</td>
+<td>
+16.09
+</td>
+<td>
+0.01
+</td>
+<td>
+0.61
+</td>
+<td>
+0.06
+</td>
+<td>
+0.15
 </td>
 </tr>
 <tr class="odd">
 <td>
-+
+cciss/c0d0p1
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.01
+</td>
+<td>
+0.00
+</td>
+<td>
+111.21
+</td>
+<td>
+0.00
+</td>
+<td>
+0.81
+</td>
+<td>
+0.62
+</td>
+<td>
+0.00
 </td>
 </tr>
 <tr class="even">
 <td>
-
+cciss/c0d0p2
 </td>
 <td>
-
+2.33
+</td>
+<td>
+21.94
+</td>
+<td>
+0.61
+</td>
+<td>
+23.54
+</td>
+<td>
+12.30
+</td>
+<td>
+181.93
+</td>
+<td>
+16.09
+</td>
+<td>
+0.01
+</td>
+<td>
+0.61
+</td>
+<td>
+0.06
+</td>
+<td>
+0.15
 </td>
 </tr>
 <tr class="odd">
 <td>
-
+dm-0
 </td>
 <td>
-
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.04
+</td>
+<td>
+8.25
+</td>
+<td>
+0.40
+</td>
+<td>
+32.99
+</td>
+<td>
+8.06
+</td>
+<td>
+0.00
+</td>
+<td>
+0.23
+</td>
+<td>
+0.02
+</td>
+<td>
+0.02
 </td>
 </tr>
 <tr class="even">
 <td>
-C
+dm-1
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+8.00
+</td>
+<td>
+0.00
+</td>
+<td>
+1.45
+</td>
+<td>
+0.26
+</td>
+<td>
+0.00
 </td>
 </tr>
 <tr class="odd">
 <td>
-O
+dm-2
 </td>
+<td>
+0.00
+</td>
+<td>
+0.00
+</td>
+<td>
+2.90
+</td>
+<td>
+37.23
+</td>
+<td>
+11.89
+</td>
+<td>
+148.94
+</td>
+<td>
+8.01
+</td>
+<td>
+0.03
+</td>
+<td>
+0.59
+</td>
+<td>
+0.15
+</td>
+<td>
+0.60
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">AS381主机硬盘使用情况</div>
+<div>
+<table class="report_table">
+<tr class="second_title">
+<th>
+Filesystem
+</th>
+<th>
+1K-blocks
+</th>
+<th>
+Used
+</th>
+<th>
+Available
+</th>
+<th>
+Use%
+</th>
+<th>
+Mounted&nbsp;on
+</th>
 </tr>
 <tr class="even">
 <td>
-M
+/dev/mapper/hdvg-rootlv
+</td>
+<td>
+30472188
+</td>
+<td>
+4968368
+</td>
+<td>
+23930956
+</td>
+<td>
+18%
+</td>
+<td>
+/
 </td>
 </tr>
 <tr class="odd">
 <td>
-M
+/dev/cciss/c0d0p1
+</td>
+<td>
+101086
+</td>
+<td>
+17995
+</td>
+<td>
+77872
+</td>
+<td>
+19%
+</td>
+<td>
+/boot
 </td>
 </tr>
 <tr class="even">
 <td>
-A
+tmpfs
+</td>
+<td>
+16328660
+</td>
+<td>
+0
+</td>
+<td>
+16328660
+</td>
+<td>
+0%
+</td>
+<td>
+/dev/shm
 </td>
 </tr>
 <tr class="odd">
 <td>
-N
+/dev/mapper/hdvg-homelv
+</td>
+<td>
+542896880
+</td>
+<td>
+128449360
+</td>
+<td>
+386869972
+</td>
+<td>
+25%
+</td>
+<td>
+/home
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="report_h report_h1">2.业务日志例检</div>
+<div class="report_content">
+<div class="report_h report_h2">messages日志记录:</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>无新增</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">AS381主机min01账户情况如下:</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>min01进程启动情况如下:</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>SCF进程启动-----------正常</pre>
 </td>
 </tr>
 <tr class="even">
-<td>
-D
+<td class="level_danger_low">
+<pre>MANAGER进程启动-------正常</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>SYNC进程启动----------正常</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>KEYTREE进程启动-------正常</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>TMNRUN进程启动--------正常</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">SCF日志记录分析如下:</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>[99]行:              [TimerExpire when WaitforATIResult日志]                      [<INFO>通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[2]行:               [timerID_global timer is time out日志]                       [<INFO>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_middle">
+<pre>[33506]行:           [Timeout when wait UDA(LOC)日志]                             [<WARN>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[12455]行:           [Can not get User-Data日志]                                  [通常为：UDA无法解析日志，一般为HSS回复消息错误导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[67]行:              [Timeout when wait ATI_ACK日志]                              [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[3]行:               [Not received Response日志]                                  [通常为：ATI超时日志，一般为HLR不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_high">
+<pre>[4257]行:            [Can not get resultCode日志]                                 [<ERROR>通常为：UDA无法解析日志，一般为HSS回复消息错误导致i，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[6418]行:            [message (3,70)日志]                                         [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[206]行:             [Timeout when wait UDA(T-ADS)日志]                           [通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[26]行:              [number.*invalid日志]                                        [<INFO>通常为：UDA超时日志，一般为HSS不回复消息导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[6]行:               [code is not DIAMETER_SUCCESS日志]                           [<INFO>通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[3009]行:            [invalid number [0-9A-Z\#\*]\{1,10\} to get area number日志] [<INFO>通常为：小于11位的号码,无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[2472]行:            [invalid number [2-9]日志]                                   [<INFO>通常为：2~9开头的号码,无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[1036]行:            [invalid number 0日志]                                       [<INFO>通常为：0开头的号码,无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[488]行:             [invalid number 1[0-2]日志]                                  [<INFO>通常为：10~12开头的号码,无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[427]行:             [invalid number [0-9]\{12,\} to get area number日志]         [<INFO>通常为：大于11位的号码,无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[10]行:              [invalid number [\#\*]日志]                                  [<INFO>通常为：特殊字符开头号码，无需获取区号，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[43]行:              [send msg(2,14), but dialogueHasBeenEnd日志]                 [<INFO>通常为：收到异常TC_END消息日志，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[39]行:              [msgID=60,msgType=3日志]                                     [<INFO>通常为：收到异常tcend消息，无需处理]</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">SCF过滤后日志如下，需要关注</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>07:15:37 -1876653853(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003395 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:49:59 -1876612874(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16194353697 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:54:59 can not find fsm -1876611007 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:36:36 -1859881563(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18088906165 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:17:39 -1859873502(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003263 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:10:03 -1859858223(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19076611535 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:04:51 -1843066118(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:07:56 can not find fsm -1826337467 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:56:10 -1826314931(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:24:11 send msg(0,31), but dialogueHasBeenEnd</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:25:04 -1826305003(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18135276671 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:02:51 -1809537673(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:07:16 can not find fsm -1809536210 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:55:30 can not find fsm -1809518871 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:57:07 -1809518260(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16195592299 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:45:49 -1809499777(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711003571 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>07:21:19 -1792785473(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711007516 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:51:41 -1792766002(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:49:54 -1792745448(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14152051884 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:54:54 -1776004715(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17498500755 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:07:02 -1775985557(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14156848971 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:11:43 -1775961696(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14153465423 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:34:38 -1775953040(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19077339629 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:09:36 -1742430920(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373175976 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:46:32 can not find fsm -1742417625 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:35:40 -1742399060(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>00:32:56 -1708911470(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711005224 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:04:33 -1708856766(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16046382828 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:10:12 can not find fsm -1708854633 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:17:57 -1692131806(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006864 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:05:13 -1692119123(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16042272363 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:59:05 can not find fsm -1692104727 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:16:53 -1675320857(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711002446 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:26:22 can not find fsm -1675317517 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:14:49 can not find fsm -1675299457 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:44:11 -1658568237(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19293017916 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:36:15 can not find fsm -1658536714 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:04:22 -1658526096(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16266000426 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:06:27 -1658525314(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14169960927 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:43:55 -1658511095(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16262650807 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:46:38 -1641733257(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711000389 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:47:14 -1641733043(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>07:56:26 -1625013319(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263211824 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:58:59 -1624997132(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number  to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:28:38 -1624986792(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800280240 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:30:51 -1608207703(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:38:08 -1608182432(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>00:05:10 can not find fsm -1591474188 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:02:23 -1591419550(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14169960927 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:01:20 -1574680499(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16261295348 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:08:52 -1574639975(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16262629185 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:15:34 can not find fsm -1557881742 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:34:16 -1557852396(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:25:36 -1541100911(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14153175176 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:27:48 can not find fsm -1541100158 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:17:31 -1541081626(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:17:31 -1541081626(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:37:04 -1524789676(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003505 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:29:16 -1524772383(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009093 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:59:05 -1524763573(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:21:03 -1524756050(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14158120099 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:04:01 -1524740078(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373772092 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>00:50:39 -1507586758(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13090197085 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:57:51 -1507556268(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14640961776 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:20:53 can not find fsm -1507548434 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:48:13 -1507515837(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:23:25 -1490770104(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711008263 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:38:55 -1490742049(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17260890703 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:09:33 -1473997856(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711005817 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:40:41 -1473986718(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16572466439 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:37:54 -1473965174(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711000389 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:49:41 -1473960738(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:17:47 -1457217223(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001645 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:35:05 -1457188426(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19075042108 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>00:08:35 can not find fsm -1440478294 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:26:46 can not find fsm -1440456004 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:34:29 -1440434187(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:16:09 -1440418576(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711002607 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:28:53 can not find fsm -1440413840 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>00:19:18 send msg(0,31), but dialogueHasBeenEnd</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:37:58 can not find fsm -1406899775 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:55:10 -1406894659(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:54:46 -1390115637(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19205967761 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:40:27 -1390099643(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:40:27 -1390099643(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:45:25 TExecuteFSM 192415008 was deleted.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:45:34 send msg(0,31), but dialogueHasBeenEnd</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:05:23 -1390090373(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16044776572 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:05:16 -1373351489(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006639 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:41:48 -1373342417(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14127702763 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:59:17 -1373315427(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001569 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:26:36 -1339774058(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 18135276671 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>01:45:05 -1323035680(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:31:04 -1323031903(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19794223603 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>07:16:06 can not find fsm -1323027789 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:24:11 send msg(0,31), but dialogueHasBeenEnd</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>03:46:59 can not find fsm -1306259403 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:32:38 -1306256472(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 182****7262 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>06:32:38 -1306256472(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 182****7262 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:51:08 -1306232804(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373176070 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:59:10 -1306230266(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 1358**775687795874*08 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:26:15 can not find fsm -1306220962 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:28:47 -1306220010(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19077517784 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>00:45:08 -1289483317(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263413266 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:36:55 can not find fsm -1272663320 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:10:58 -1272650480(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711006770 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:48:46 -1272636112(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009395 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:00:27 -1255787395(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16263211824 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:01:06 -1255749666(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19078837528 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:20:43 -1239144168(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711001523 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:37:05 -1239086473(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:33:40 -1205554894(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711002607 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:28:14 -1188779481(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800280240 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:52:01 can not find fsm -1188770719 for a message (1,31)</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:43:03 -1188751419(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16042362586 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:49:30 -1188748975(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 19179630804 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:25:24 -1172002146(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373768170 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:16:18 -1171983103(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 16478600129 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:40:23 -1171973995(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711003571 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:00:53 -1155234733(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17310691753 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:08:28 -1155232232(1,31):tc2f_normal_80(Cml2Conn) -1 *NORMAL   received unexpected message(msgID=31,msgType=1)!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:26:55 -1155225681(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17711009093 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:27:12 -1155203090(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800832240 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>00:53:53 -1138489717(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 14245228687 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:35:43 -1138446088(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 17711009554 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:59:53 -1121658957(3,2):o6ba1(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:59:53 -1121658957(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:07:50 -1104899231(3,2):ct5e(Algrism) 0 *NORMAL   [0] invalid number 17373772673 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:18:19 -1104895594(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 15344752266 to get area number</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:43:57 -1104863701(3,2):o12_10(Algrism) 0 *NORMAL   [0] invalid number 13800138000 to get area number</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:45:37 can not find fsm -1104863113 for a message (1,31)</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">SSF日志记录分析如下:</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>[11893]行:           [should check diametermsg.xml日志]                           [通常为：dia消息字典问题报错，不影响业务，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[19024]行:           [Find FsmInsance is 0日志]                                   [通常为：呼叫释放后收到bye消息日志，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[12061]行:           [when Job is over日志]                                       [通常为：呼叫结束后收到错误INVITE消息，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[14771]行:           [Trace日志]                                                  [通常为：trace日志，可忽略]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>[18175]行:           [the Job is over日志]                                        [通常为：呼叫结束后收到错误INVITE消息，可忽略]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[6678]行:            [find  route item when modifyOuterRoute日志]                 [通常为：消息到达后台时，对应呼叫已经释放，所以无路由，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_high">
+<pre>[3911]行:            [TLibATIResImpl日志]                                         [<ERROR>通常为：UDA返回码错误，一般为HSS回复消息错误导致，无需太过关注]</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>[126]行:             [INFO日志]                                                   [通常为：小scf-INFO级别日志，可忽略]</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">SSF过滤后日志如下，需要关注</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:40:16:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:21:36:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:03:30:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:27:20:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1826281475.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:05:53:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:46:04:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:31:16:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:41:03:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1776013998.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:05:09:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:03:25:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:03:25:ERROR2 Transfer value to cstr failure:name[35]!!!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:34:43:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:34:43:ERROR2 Transfer value to cstr failure:name[35]!!!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:39:43:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:58:59:ERROR1 Transfer data from type STRING to CSTR failed!erroNum=-2.</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:58:59:ERROR2 Transfer value to cstr failure:name[35]!!!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:15:07:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:58:55:ERROR2 InvokeId(132) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:04:55:ERROR2 InvokeId(133) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:10:55:ERROR2 InvokeId(135) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:13:55:ERROR2 InvokeId(136) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:19:55:ERROR2 InvokeId(138) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:25:55:ERROR2 InvokeId(139) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:28:55:ERROR2 InvokeId(141) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:34:55:ERROR2 InvokeId(142) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:40:55:ERROR2 InvokeId(144) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:43:55:ERROR2 InvokeId(145) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:49:55:ERROR2 InvokeId(147) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:55:55:ERROR2 InvokeId(148) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:58:55:ERROR2 InvokeId(150) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>06:04:55:ERROR2 InvokeId(151) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:10:55:ERROR2 InvokeId(153) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>06:13:55:ERROR2 InvokeId(154) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>06:13:55:ERROR2 InvokeId(156) is occupied whose capdlg is 1277822241 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:36:44:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:01:57:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:27:15:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>03:55:42:ERROR2 InvokeId(133) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>03:58:42:ERROR2 InvokeId(134) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>03:58:48:ERROR2 InvokeId(129) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:04:42:ERROR2 InvokeId(136) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:04:48:ERROR2 InvokeId(130) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:10:42:ERROR2 InvokeId(137) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:10:48:ERROR2 InvokeId(131) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:13:42:ERROR2 InvokeId(139) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:13:49:ERROR2 InvokeId(132) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:19:42:ERROR2 InvokeId(140) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:19:48:ERROR2 InvokeId(133) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:25:42:ERROR2 InvokeId(142) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:25:48:ERROR2 InvokeId(134) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:28:42:ERROR2 InvokeId(143) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:28:49:ERROR2 InvokeId(135) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:34:42:ERROR2 InvokeId(145) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:34:49:ERROR2 InvokeId(136) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:40:42:ERROR2 InvokeId(146) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:40:49:ERROR2 InvokeId(137) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:43:42:ERROR2 InvokeId(148) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:43:49:ERROR2 InvokeId(138) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:49:42:ERROR2 InvokeId(149) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:49:49:ERROR2 InvokeId(139) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:55:42:ERROR2 InvokeId(151) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:55:49:ERROR2 InvokeId(140) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>04:58:42:ERROR2 InvokeId(152) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>04:58:50:ERROR2 InvokeId(141) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:04:42:ERROR2 InvokeId(154) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:04:49:ERROR2 InvokeId(142) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:10:42:ERROR2 InvokeId(155) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:10:49:ERROR2 InvokeId(143) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>05:13:39:ERROR2 InvokeId(144) is occupied whose capdlg is -1506671327 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>05:13:39:ERROR2 InvokeId(157) is occupied whose capdlg is -329972448 in setInvokeId</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:21:52:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:53:37:ERROR1 parse sdp msg error when decodeFromCarrier. sdp as follow[148bytes]:</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>v=0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>o=- 1525657997 1525657998 IN IP4 127.0.0.1</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>c=IN IP4 0.0.0.0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>s=Sip Call</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>t=0 0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>m=audio 4917 RTP/AVP 0</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>a=rtpmap:0 PCMU/8000</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>a=sendonly</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre></pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre></pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:53:37:ERROR1 impl is NULL when getType!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:53:37:ERROR1 parse sdp msg error when decodeFromCarrier. sdp as follow[144bytes]:</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>v=0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>o=- 1525657997 1525657998 IN IP4 127.0.0.1</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>c=IN IP4 0.0.0.0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>s=Sip Call</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>t=0 0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>m=audio 4917 RTP/AVP 0</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>a=rtpmap:0 PCMU/8000</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>a=sendonly</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:53:37:ERROR1 error in decodeFromCarrier libMsg type[1], carryPara [v=0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>o=- 1525657997 1525657998 IN IP4 127.0.0.1</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>c=IN IP4 0.0.0.0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>s=Sip Call</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>t=0 0</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>m=audio 4917 RTP/AVP 0</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>a=rtpmap:0 PCMU/8000</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>a=sendonly</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>].</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:53:37:ERROR1 impl is NULL when getType!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:48:02:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>07:37:59:ERROR1 Send msg(0,36) dlg(1045562656), but dialogueHasBeenEnd!!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>10:08:45:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>10:46:41:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1188750023.</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>07:38:51:ERROR1 SIPIndication msg select slp error!serviceKey:-1,fsmInstance:-1172030439.</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:09:31:ERROR1 index[0] out of range, valueSet's size is 0!</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>SSF日志例检完成</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">sync、log.sdf等日志分析如下：</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>sync.log日志-----------无新增，无需查看</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>keytree日志------------无新增，无需查看</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>log.sdf日志------------无新增，无需查看</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">alarm.scf.log日志过滤后如下：</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>2018/05/07  Monday  10:19:18    SENDALARM: run init() first.</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>2018/05/07  Monday  10:50:12    SENDALARM: run init() first.</pre>
+</td>
+</tr>
+</table>
+</div>
+<div class="report_h report_h2">MANINFO日志分记录如下：</div>
+<div>
+<table class="report_table">
+<tr class="even">
+<td class="level_danger_low">
+<pre>Mon May  7 08:47:20 2018</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre></pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:47:20: unknown dialog[297024b6],38prim16</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>08:47:20: 	Operation is 22</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>08:47:20: unknown dialog[297024b6],38prim4</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:44:34: unknown dialog[62331ea5],21prim16</pre>
+</td>
+</tr>
+<tr class="even">
+<td class="level_danger_low">
+<pre>09:44:34: 	Operation is 22</pre>
+</td>
+</tr>
+<tr class="odd">
+<td class="level_danger_low">
+<pre>09:44:34: unknown dialog[62331ea5],21prim4</pre>
 </td>
 </tr>
 </table>
@@ -470,29 +2548,4 @@ D
         </script>
         </body>
         </html>
-        
-
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-        <title>主机报表</title>
-        <link rel="stylesheet" href="media/report/css/ns_report.css" />
-        <link rel="stylesheet" href="media/report/css/ns_report_rsas.css" />
-        <script src="media/report/js/jquery-1.7.2.js"></script>
-        <script src="media/report/js/common.js"></script>
-        </head>
-        <body>
-	
-        <div id="report" class="wrapper">
-          <!--div class="report_tip"></div-->
-          <div id="head" class="report_title">
-            <h1>例检报告-AS381</h1>
-            <span class="note">&nbsp;</span> 
-          </div>
-          <!--head end,catalog start-->
-          <div id="catalog">
-            <div class="report_h1">目录</div>
-          </div>
-          <div id="content">
         

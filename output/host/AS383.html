@@ -1,0 +1,48 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>主机报表</title>
+        <link rel="stylesheet" href="media/report/css/ns_report.css" />
+        <link rel="stylesheet" href="media/report/css/ns_report_rsas.css" />
+        <script src="media/report/js/jquery-1.7.2.js"></script>
+        <script src="media/report/js/common.js"></script>
+        <style>pre{font-size: 13px; font-family: "黑体";}</style>
+        </head>
+        <body>
+	
+        <div id="report" class="wrapper">
+          <div class="report_tip"></div>
+          <div id="head" class="report_title">
+            <h1>例检报告-AS383</h1>
+            <span class="note">&nbsp;</span> 
+          </div>
+          <!--head end,catalog start-->
+          <div id="catalog">
+            <div class="report_h1">目录</div>
+          </div>
+          <div id="content">
+        
+</div>
+
+        <script type="text/javascript">
+	    function getPageY(element){
+	  	    return element.offsetTop + (element.offsetParent ? arguments.callee(element.offsetParent) : 0) 
+	    }
+	    jQuery(function($){
+            //window.dialog = new UI.Dialog({name:'dialog'});
+            $("#catalog_tree").report_tree();
+            $("#report").catalog();
+            $('#catalog').delegate('a.link', 'click', function(event){
+                event.preventDefault();
+                $("#catalog").find("div.report_content").hide();
+                $("#catalog").find(".h1_dot").addClass("up");
+                jumpToHash(event.target.hash);
+            });
+            $.gotop();
+	    });
+        </script>
+        </body>
+        </html>
+        
