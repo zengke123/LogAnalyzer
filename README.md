@@ -8,7 +8,7 @@
 
 示例
 + index
-![image](https://github.com/zengke123/LogAnalyzer/output/demo/index.png)
+![image](https://github.com/zengke123/LogAnalyzer/tree/master/output/demo/index.png)
 
 + 主机
-![image](https://github.com/zengke123/LogAnalyzer/output/demo/AS381.png)
+![image](https://github.com/zengke123/LogAnalyzer/tree/master/output/demo/AS381.png)
