@@ -104,27 +104,27 @@ class LogParser(Parser):
 
 if __name__ == '__main__':
     # 日志存放路径
-    logPath = "log" + os.sep
+    log_path = "log" + os.sep
     # html文件生成路径
-    htmlPath = "output" + os.sep + "host" + os.sep
-    fileList = os.listdir(logPath)
+    html_path = "output" + os.sep + "host" + os.sep
+    file_list = os.listdir(log_path)
     # 需呈现在index中的告警日志,由Rule类匹配，通过Parse类提取并返回
     result = {}
     # 生成主机例检报告
     handler = HTMLRenderer()
     parser = LogParser(handler)
-    for file in fileList:
+    for file in file_list:
         hostname = file.split('.')[0]
-        output = htmlPath + hostname + ".html"
+        output = html_path + hostname + ".html"
         # 开始解析
         with LogSave(output):
-            with open(logPath + file, 'r') as f:
+            with open(log_path + file, 'r') as f:
                 # 解析，返回提取到的告警日志
                 alarms = parser.parse(f, hostname)
                 result[hostname] = alarms
     # 生成汇总报告
-    hostNum = len(fileList)
-    checkTime = fileList[0].split('.')[1]
+    host_num = len(file_list)
+    check_time = file_list[0].split('.')[1]
     with LogSave("output" + os.sep + "index.html"):
-        parser.index(checkTime,hostNum,result)
+        parser.index(check_time,host_num,result)
 
