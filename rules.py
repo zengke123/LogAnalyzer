@@ -2,8 +2,39 @@
 # 设计规则来判断每个文本块交给处理程序将要加什么标记
 
 import re
+from collections import namedtuple
 
-class TitleRule():
+# 提取匹配到的告警信息，级别（level） 标题（title） 内容（content）
+Alarm = namedtuple("Alarm","level title content")
+
+class Rule():
+    '''
+    规则父类，匹配类型并提取告警信息
+    '''
+
+    def __init__(self):
+        # 告警信息
+        self.alarms = []
+
+    def add_alarm(self, alarm):
+        self.alarms.append(alarm)
+
+    def clear_alarm(self):
+        self.alarms.clear()
+
+    # 检查日志中有无告警信息
+    def check_alarm(self, line):
+        if "<ERROR>" in line :
+            level = "level_danger_high"
+        elif "<WARN>" in line:
+            level = "level_danger_middle"
+        else:
+            level = "level_danger_low"
+
+        return level
+
+
+class TitleRule(Rule):
     """
     一号标题规则
     """
@@ -20,9 +51,9 @@ class TitleRule():
         """
         title = block[0].strip('<h1>')
         handler.start('title_h1',title)
-        return True
+        # return True
 
-class LogRule():
+class LogRule(Rule):
     """
     日志规则
     """
@@ -40,7 +71,11 @@ class LogRule():
                 handler.start('tr','even')
             else:
                 handler.start('tr', 'odd')
-            level = self.check(line)
+            # 匹配是否存在告警日志
+            level = self.check_alarm(line)
+            if level != "level_danger_low":
+                alarm = Alarm(level,title,line)
+                self.add_alarm(alarm)
             handler.start('td',level)
             line = "<pre>" + line + "</pre>"
             handler.feed(line)
@@ -48,19 +83,10 @@ class LogRule():
             handler.end('tr')
         handler.end('table')
         handler.end('title_h2')
-
-    def check(self,line):
-        if "<ERROR>" in line or  "ERROR" in line:
-            level = "level_danger_high"
-        elif "<WARN>" in line:
-            level = "level_danger_middle"
-        else:
-            level = "level_danger_low"
-        return level
+        # return self.alarms if len(self.alarms) != 0 else None
 
 
-
-class TableRule():
+class TableRule(Rule):
     """
     表格规则
     """
@@ -143,6 +169,7 @@ class MixTableRule(TableRule):
         super().formatTable(block[i+1:],handler)
         handler.end('table')
         handler.end('title_h2')
+
 
 
 
