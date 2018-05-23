@@ -63,7 +63,7 @@ class LogRule(Rule):
         return block[0].startswith('<log>')
 
     def action(self, block, handler):
-        title = block[0].strip('<log>')
+        title = block[0].replace('<log>','')
         handler.start('title_h2',title)
         handler.start('table')
         for i , line in enumerate(block[1:]):
