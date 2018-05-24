@@ -5,7 +5,15 @@ def lines(file):
     """
     生成器,在文本最后加一空行
     """
-    for line in file: yield line
+    for line in file:
+        try:
+            line = line.decode("gbk")
+        except UnicodeDecodeError:
+            line = "None"
+        except AttributeError:
+            pass
+        finally:
+            yield line
     yield '\n'
 
 def blocks(file):
