@@ -16,6 +16,7 @@ class Rule():
         # 告警信息
         self.alarms = []
 
+
     def add_alarm(self, alarm):
         self.alarms.append(alarm)
 
@@ -38,6 +39,10 @@ class TitleRule(Rule):
     """
     一号标题规则
     """
+    def __init__(self):
+        # 判断调用次数,实现标题自动编号
+        self.count = 0
+        super().__init__()
 
     def condition(self, block):
         """
@@ -49,9 +54,11 @@ class TitleRule(Rule):
         """
         加标记
         """
-        title = block[0].strip('<h1>')
+        self.count += 1
+        title = str(self.count) + ". " + block[0].strip('<h1>')
         handler.start('title_h1',title)
         # return True
+
 
 class LogRule(Rule):
     """
