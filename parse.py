@@ -2,6 +2,7 @@
 # encoding: utf-8
 # 主程序，对文本进行解析,并输出到对应的文件
 import os
+import codecs
 from handlers import *
 from util import *
 from rules import *
@@ -112,19 +113,22 @@ if __name__ == '__main__':
     result = {}
     # 生成主机例检报告
     handler = HTMLRenderer()
-    parser = LogParser(handler)
+    # parser = LogParser(handler)
     for file in file_list:
+        parser = LogParser(handler)
         hostname = file.split('.')[0]
         output = html_path + hostname + ".html"
         # 开始解析
         with LogSave(output):
-            with open(log_path + file, 'r') as f:
+            with codecs.open(log_path + file, 'rb') as f:
                 # 解析，返回提取到的告警日志
                 alarms = parser.parse(f, hostname)
                 result[hostname] = alarms
     # 生成汇总报告
     host_num = len(file_list)
     check_time = file_list[0].split('.')[1]
+    index_parser = LogParser(handler)
     with LogSave("output" + os.sep + "index.html"):
-        parser.index(check_time,host_num,result)
+        index_parser.index(check_time,host_num,result)
+
 
