@@ -2,7 +2,7 @@
 # encoding: utf-8
 # 主程序，对文本进行解析,并输出到对应的文件
 import os
-import codecs
+import datetime
 from handlers import *
 from util import *
 from rules import *
@@ -28,7 +28,7 @@ class Parser:
         解析日志生成html
         :param file: 文件对象
         :param hostname: 主机名
-        :return: 根据Rule类匹配的告警日志
+        :return: 根据Rule类匹配的告警日志 -> Alarm具名元组
         '''
         self.handler.start('head',hostname)
         first_title_h1 = 0
@@ -59,20 +59,20 @@ class Parser:
         生成index.html
         :param CheckTime: 例检时间
         :param HostNum: 例检主机数量
-        :param Alarm: 告警日志,类型为Dict
+        :param Alarm: 告警日志,类型为list [(主机名，告警列表),(主机名，告警列表)]
         :return: None
         '''
         self.handler.start("index", CheckTime, HostNum)
-        for k, v in Alarm.items():
+        for item in Alarm:
             data = ""
             self.handler.start("tr", "odd")
             self.handler.start("td")
-            if len(v) != 0:
-                if "level_danger_high" in [alarm.level for alarm in v]:
+            if len(item[1]) != 0:
+                if "level_danger_high" in [alarm.level for alarm in item[1]]:
                     level = "level_danger_high"
                 else:
                     level = "level_danger_middle"
-                for alarm in v:
+                for alarm in item[1]:
                     if alarm.title not in data:
                         data = data + alarm.title + "<br>" + alarm.content +"<br>"
                     else:
@@ -83,7 +83,7 @@ class Parser:
                 data = "无异常"
             info = '''
                     <img align='absmiddle' src='host/media/report/images/{}.gif'></img><a href="host/{}.html" target="_blank">{}</a>
-                    '''.format(level, k, k)
+                    '''.format(level,item[0], item[0])
             self.handler.feed(info)
             self.handler.end("td")
             self.handler.start("td")
@@ -109,8 +109,10 @@ if __name__ == '__main__':
     # html文件生成路径
     html_path = "output" + os.sep + "host" + os.sep
     file_list = os.listdir(log_path)
+    # 清理垃圾html文件
+    # os.system("rm -f output/host/*.html")
     # 需呈现在index中的告警日志,由Rule类匹配，通过Parse类提取并返回
-    result = {}
+    result = []
     # 生成主机例检报告
     handler = HTMLRenderer()
     # parser = LogParser(handler)
@@ -120,15 +122,33 @@ if __name__ == '__main__':
         output = html_path + hostname + ".html"
         # 开始解析
         with LogSave(output):
-            with codecs.open(log_path + file, 'rb') as f:
+            with open(log_path + file, 'rb') as f:
                 # 解析，返回提取到的告警日志
                 alarms = parser.parse(f, hostname)
-                result[hostname] = alarms
+                result.append((hostname,alarms))
+    print(result)
+    # result按告警严重程序排序
+    def paixu(values):
+        flag = 2
+        if len(values) == 0:
+            flag = 2
+        else:
+            if "level_danger_high" in [alarm.level for alarm in values]:
+                flag = 0
+            else:
+                flag = 1
+        return flag
+    result_sorted = sorted(result, key= lambda item:paixu(item[1]))
     # 生成汇总报告
     host_num = len(file_list)
     check_time = file_list[0].split('.')[1]
     index_parser = LogParser(handler)
     with LogSave("output" + os.sep + "index.html"):
-        index_parser.index(check_time,host_num,result)
+        index_parser.index(check_time,host_num,result_sorted)
 
+    # 输出报告打包
+    now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    os.environ['now'] = str(now)
+    tar_cmd = 'tar zcf  report.${now}.tar.gz output/*'
+    os.system(tar_cmd)
 

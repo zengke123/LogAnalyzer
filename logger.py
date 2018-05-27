@@ -8,7 +8,7 @@ logger.setLevel(logging.INFO)
 
 class LogSave():
 
-    def __init__(self,name):
+    def __init__(self, name):
         self.logger = logger
         self.fh = logging.FileHandler(filename=name, mode="w")
         self.fh.setLevel(logging.INFO)
