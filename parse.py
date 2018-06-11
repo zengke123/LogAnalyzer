@@ -2,6 +2,7 @@
 # encoding: utf-8
 # 主程序，对文本进行解析,并输出到对应的文件
 import os
+import sys
 import datetime
 from handlers import *
 from util import *
@@ -115,7 +116,6 @@ if __name__ == '__main__':
     result = []
     # 生成主机例检报告
     handler = HTMLRenderer()
-    # parser = LogParser(handler)
     for file in file_list:
         parser = LogParser(handler)
         hostname = file.split('.')[0]
@@ -126,10 +126,8 @@ if __name__ == '__main__':
                 # 解析，返回提取到的告警日志
                 alarms = parser.parse(f, hostname)
                 result.append((hostname,alarms))
-    print(result)
     # result按告警严重程序排序
     def paixu(values):
-        flag = 2
         if len(values) == 0:
             flag = 2
         else:
@@ -147,8 +145,11 @@ if __name__ == '__main__':
         index_parser.index(check_time,host_num,result_sorted)
 
     # 输出报告打包
-    now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    os.environ['now'] = str(now)
-    tar_cmd = 'tar zcf  report.${now}.tar.gz output/*'
+    if len(sys.argv) == 2:
+        filename = sys.argv[1]
+    else:
+        filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    os.environ['filename'] = str(filename)
+    tar_cmd = 'tar zcf  report.${filename}.tar.gz output/*'
     os.system(tar_cmd)
 
