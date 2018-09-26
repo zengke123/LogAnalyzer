@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 # 主程序，对文本进行解析,并输出到对应的文件
+# 执行时需要注意环境变量的问题，export LANG=en_US;export LANGUAGE=en_US 会失败
 import os
 import sys
 import datetime
@@ -55,7 +56,7 @@ class Parser:
         return result
 
 
-    def index(self,CheckTime, HostNum, Alarm):
+    def index(self, CheckTime, HostNum, Alarm):
         '''
         生成index.html
         :param CheckTime: 例检时间
@@ -84,7 +85,7 @@ class Parser:
                 data = "无异常"
             info = '''
                     <img align='absmiddle' src='host/media/report/images/{}.gif'></img><a href="host/{}.html" target="_blank">{}</a>
-                    '''.format(level,item[0], item[0])
+                    '''.format(level, item[0], item[0])
             self.handler.feed(info)
             self.handler.end("td")
             self.handler.start("td")
@@ -92,6 +93,7 @@ class Parser:
             self.handler.end("td")
             self.handler.end("tr")
         self.handler.end("index")
+
 
 class LogParser(Parser):
     """
@@ -104,6 +106,7 @@ class LogParser(Parser):
         self.addRule(TableRule())
         self.addRule(MixTableRule())
 
+
 if __name__ == '__main__':
     # 日志存放路径
     log_path = "log" + os.sep
@@ -111,7 +114,7 @@ if __name__ == '__main__':
     html_path = "output" + os.sep + "host" + os.sep
     file_list = os.listdir(log_path)
     # 清理垃圾html文件
-    # os.system("rm -f output/host/*.html")
+    os.system("rm -f output/host/*.html")
     # 需呈现在index中的告警日志,由Rule类匹配，通过Parse类提取并返回
     result = []
     # 生成主机例检报告
@@ -124,8 +127,11 @@ if __name__ == '__main__':
         with LogSave(output):
             with open(log_path + file, 'rb') as f:
                 # 解析，返回提取到的告警日志
-                alarms = parser.parse(f, hostname)
-                result.append((hostname,alarms))
+                try:
+                    alarms = parser.parse(f, hostname)
+                    result.append((hostname,alarms))
+                except Exception as e:
+                    print(file,e)
     # result按告警严重程序排序
     def paixu(values):
         if len(values) == 0:
@@ -150,6 +156,6 @@ if __name__ == '__main__':
     else:
         filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
     os.environ['filename'] = str(filename)
-    tar_cmd = 'tar zcf  report.${filename}.tar.gz output/*'
+    tar_cmd = 'tar zcf  upfile/report.${filename}.tar.gz output/*'
     os.system(tar_cmd)
-
+    os.system("rm -f log/*.txt")

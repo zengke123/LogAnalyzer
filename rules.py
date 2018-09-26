@@ -25,6 +25,8 @@ class Rule():
 
     # 检查日志中有无告警信息
     def check_alarm(self, line):
+        if isinstance(line, list):
+            line = ''.join(line)
         if "<ERROR>" in line :
             level = "level_danger_high"
         elif "<WARN>" in line:
@@ -137,10 +139,11 @@ class TableRule(Rule):
         handler.end('tr')
         # 表数据
         for i, line in enumerate(finalData[1:]):
+            level = self.check_alarm(line)
             if i % 2 == 0:
-                handler.start('tr','even')
+                handler.start('tr','even', level)
             else:
-                handler.start('tr', 'odd')
+                handler.start('tr', 'odd', level)
             for data in line:
                 handler.start('td')
                 handler.feed(data)

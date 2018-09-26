@@ -35,8 +35,9 @@ class HTMLRenderer(Handler):
     def end_title_h2(self):
         logger.info('</div>')
 
-    def start_tr(self,css_name):
+    def start_tr(self, *css_names):
         # css_name in (even,odd,second_title)
+        css_name = ' '.join(css_names)
         logger.info('<tr class="'+ str(css_name) + '">')
 
     def end_tr(self):
